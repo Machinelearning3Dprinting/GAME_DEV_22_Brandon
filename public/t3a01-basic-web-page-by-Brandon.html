@@ -2,6 +2,21 @@
 
 <html style="color:White;font-size:Large"><br>
 
+<script>
+function Greeting() {
+    const d = new Date();
+    const h = d.getHours();
+    if (h <= 11) {
+    var greeting = 'Good Morning';
+    } else if (h >= 12 && h <= 16){
+    var greeting = 'Good Afternoon';
+    } else {
+    var greeting = 'Good Evening';
+    }
+    return document.getElementById('myDiv01').innerHTML =  greeting;
+    }
+</script><br>
+
 <head>
     <title>Basic Web Page</title>
     </head>
@@ -30,7 +45,7 @@
   
   
   <body>
-    <h5 align=center>Version 0.36.18.60</h5>
+    <h5 align=center>Version 0.39.18.63</h5>
     <h1 align=center>T3A01-Basic-Web-Page-By-BRANDON.html</h1>
     <a style="color:Red" href="http://www.google.ca">Google</a><br>
     Plain Text <b> BOLD </b> and <i> Italic </i> can you put them together<br>
@@ -59,17 +74,8 @@
     
     <input type=button value="1. Input/Output" onclick="{document.getElementById('myDiv01').innerHTML = 'Input adffgdsfsgsdfdfg<br>' + 'sdfg<br>sdfg<br>output is...'}">
     
-    <button
-    onclick="{
-    <script>
-    const hour = new Date();
-    if (hour.getHours() < 12) {
-    var greeting = \'Good morning\';
-    } else {
-    var greeting = \'Good Evening\';
-    }
-    </script>
-    }">Greeting</button>
+    <input type=button value="2. greeting" onclick="{document.getElementById('myDiv01').innerHTML =  Greeting();}">
+<br>
     
     You do: 2:variables, 3:loops, 5:functions, 6:events, 7:arrays, 8:objects, 9:classes<br>
     
