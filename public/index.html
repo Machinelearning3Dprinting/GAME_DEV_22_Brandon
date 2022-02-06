@@ -1,13 +1,65 @@
 <!DOCTYPE html>
-<html>
-  
-  <body>
+
+<html style="font-size:Large">
+
+
+
+<style>
+
+a {
+background-color:Black;
+display:Inline;
+}
+
+h2 {
+background-color:Black;
+display:Table;
+margin: 25px auto 0px auto;
+}
+
+h5 {
+background-color:Black;
+display:Table;
+margin: 0px auto 0px auto;
+}
+
+h4#mygreeting {
+align:center;
+vertical-align:middle;
+background-color:Black;
+color:DarkRed;
+display:Table;
+margin: 0px auto 0px auto;
+position:static;
+bottom:0%;
+}
+
+</style>
+
+
+<script>
+function Greeting() {
+    const d = new Date();
+    const h = d.getHours();
+    if (h <= 11) {
+    var greeting = 'Good Morning';
+    } else if (h >= 12 && h <= 16){
+    var greeting = 'Good Afternoon';
+    } else {
+    var greeting = 'Good Evening';
+    }
+    return document.getElementById('mygreeting').innerHTML =  greeting;
+    }
+</script><br>
+
+<head>
+    <title>Index.html</title>
+    </head>
+
+<script>
     
-    <script>
-      
+    function mybackground() {  
       var W = window.innerWidth;
-      
-      //window.alert(W);
       
       if (W > 1000) {
         
@@ -22,27 +74,40 @@
         document.body.style.backgroundSize = "100vw auto";
         document.body.style.backgroundAttachment = "fixed";
       }
-    
+    }
+    mybackground();
     </script>
+  
+  
+  <body onload="mybackground();Greeting()" onresize="mybackground()">
 
-    <h5 align=center style="color:DarkRed">Version 0.12.23.46</h5>
+<h5 align=center style="color:DarkRed">Version 0.30.30.70</h5>
 
     <h2 align=center style="color:DarkRed">GAME DEV 2022</h2>
     <hr>
 
-    <li><a style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/index.html">Index.html</a>
-    <li><a style="color:Crimson"  href="https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon">Github Repo</a><br><br>
+    <li><a style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/index.html">Index.html</a></li>
+    <li><a style="color:Crimson"  href="https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon">Github Repo</a></li>
 
-    <li><a style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a01-basic-web-page-by-Brandon.html">T3A01-Basic-Webpage-By-Brandon</a><br><br>
-    <li><a style="color:Crimson" href="..">...</a>
-    <li><a style="color:Gray" href="..">...</a><br><br>
+    <br><br>
 
-    <li><a style="color:Crimson" href="..">...</a>
-    <li><a style="color:Gray" href="..">...</a>
-    <li><a style="color:Crimson"  href="..">...</a>
-    <li><a style="color:Gray" href="..">...</a>
-    <li><a style="color:Crimson" href="..">...</a>
-    <li><a style="color:Gray" href="..">...</a>
+    <li><a style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a01-basic-web-page-by-Brandon.html">T3A01-Basic-Webpage-By-Brandon</a></li>
 
-  </body>  
-</html>
+    <br><br>
+
+    <li><a style="color:Crimson" href="..">...</a></li>
+    <li><a style="color:Gray" href="..">...</a></li>
+
+    <br><br>
+
+    <li><a style="color:Crimson" href="..">...</a></li>
+    <li><a style="color:Gray" href="..">...</a></li>
+    <li><a style="color:Crimson"  href="..">...</a></li>
+    <li><a style="color:Gray" href="..">...</a></li>
+    <li><a style="color:Crimson" href="..">...</a></li>
+    <li><a style="color:Gray" href="..">...</a></li>
+
+      
+    <h4 id='mygreeting'>...</h4>
+    </body>
+  </html>
