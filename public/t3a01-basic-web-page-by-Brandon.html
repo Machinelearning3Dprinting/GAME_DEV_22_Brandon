@@ -2,6 +2,9 @@
 
 <html style="color:White;font-size:Large"><br>
 
+
+<h4 id="mygreetingdiv" style="display:inline">...</h4>
+
 <script>
 function Greeting() {
     const d = new Date();
@@ -13,7 +16,44 @@ function Greeting() {
     } else {
     var greeting = 'Good Evening';
     }
-    return document.getElementById('myDiv01').innerHTML =  greeting;
+    return document.getElementById('mygreeting').innerHTML =  greeting;
+    }
+</script><br>
+
+
+
+
+<style>
+input{cursor:pointer;}
+
+h4#mygreetingdiv {
+postion:absolute;
+top:0%;
+left:0%;
+
+}
+
+h1, h2, h3, h4, h5 {
+background-color:Black;
+display:Table;
+margin: 0px auto 0px auto;
+}
+
+
+</style>
+
+<script>
+function Greeting() {
+    const d = new Date();
+    const h = d.getHours();
+    if (h <= 11) {
+    var greeting = 'Good Morning';
+    } else if (h >= 12 && h <= 16){
+    var greeting = 'Good Afternoon';
+    } else {
+    var greeting = 'Good Evening';
+    }
+    return document.getElementById('mygreetingdiv').innerHTML =  greeting;
     }
 </script><br>
 
@@ -21,11 +61,9 @@ function Greeting() {
     <title>Basic Web Page</title>
     </head>
 
+
 <script>
     
-    function myalert() {
-        window.alert("Hello And Welcome To The Lovely Basic WebPage By BRANDON");
-    }
     function mybackground() {  
       var W = window.innerWidth;
       
@@ -46,9 +84,8 @@ function Greeting() {
     mybackground();
     </script>
   
-  
-  <body onload="myalert()" onresize="mybackground()">
-    <h5 align=center>Version 0.41.18.67</h5>
+  <body onload="mybackground();Greeting()" onresize="mybackground();Greeting();">
+    <h5 align=center>Version 1.56.30.94</h5>
     <h1 align=center>T3A01-Basic-Web-Page-By-BRANDON.html</h1>
     <a style="color:Red" href="http://www.google.ca">Google</a><br>
     Plain Text <b> BOLD </b> and <i> Italic </i> can you put them together<br>
@@ -58,9 +95,9 @@ function Greeting() {
     This is an image <br>
     <img width=200 src="https://www.whatspaper.com/wp-content/uploads/2021/08/whatspaper-102.jpg"><br><br>
     
-    YouTube Embedded Video<br>
+    Darth Farmer<br>
     
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/QE7pZJreUM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/KQFho0_G1VI" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <hr>
     
     <div>This is a</div>
@@ -73,14 +110,95 @@ function Greeting() {
     <h3>Write about Ellis' 10 main areas of coding</h3>
     <br><br>
     
-    <input type=button value="0. Hello World" onclick="{document.getElementById('myDiv01').innerHTML = 'Hello Wolrd'}">
+
+    <input type=button value="0. Pseudo Code" onclick="{document.getElementById('myDiv01').innerHTML = 'Easy to use generalization code. Ex. <pre> myCode</pre>'}">
+    <br>
     
-    <input type=button value="1. Input/Output" onclick="{document.getElementById('myDiv01').innerHTML = 'Input asdasdasdasadf<br>' + 'sdfg<br>sdfg<br>output is...'}">
-    
-    <input type=button value="2. greeting" onclick="{document.getElementById('myDiv01').innerHTML =  Greeting();}">
+
+<input type=button value="1. Variables" onclick="{document.getElementById('myDiv01').innerHTML = `For storing changing values(like for controling If Statements). Ex. 
+<pre> const d = new Date();
+ const h = d.getHours();</pre>`}">
 <br>
+
+<input type=button value="2. Input/Output" onclick="{document.getElementById('myDiv01').innerHTML = 'Determines what actions can be taken in response to user input. Ex. <pre> document.getElementById(demo).innerHTML = 5 + 6;</pre>'}">
+<br>
+
+<input type=button value="3. Decisions" onclick="{document.getElementById('myDiv01').innerHTML = `Uses if statments to change variables suitable greetings dependant on the time. Ex 
+ <pre> if (h <= 11) {
+     var greeting = 'Good Morning';
+ } else if (h >= 12 && h <= 16){
+    var greeting = 'Good Afternoon';
+ } else {
+     var greeting = 'Good Evening';
+ }</pre>`}">
+ <br>
+
     
-    You do: 2:variables, 3:loops, 5:functions, 6:events, 7:arrays, 8:objects, 9:classes<br>
+
+
+<input type=button value="4. Loops" onclick="{document.getElementById('myDiv01').innerHTML = `Loops given code as long as certain conditions are met and/or until a specified amount of loops have occurred. Ex. 
+ <pre> for (i=1; i<=5; i++)  {
+     document.write(i + &ltbr&gt);  
+    }</pre> `}">
+ <br>
+
+<!--FIXING NEEDED-->
+<input type=button value="5. Events" onclick="{document.getElementById('myDiv01').innerHTML = `Code that reacts to user input and makes something happen. Ex.<br><pre> &ltbutton onclick=document.getElementById('demo').innerHTML = Date();&gtThe time is?&lt/button&gt<pre>`}">
+ <br>
+
+<input type=button value="6. Array" onclick="{document.getElementById('myDiv01').innerHTML = `Special type of objects that use numbers to access their elements. Ex. <pre> x = [1, 5, 9, 13];
+
+ x[0] = 1;
+ x[1] = 5;
+ x[2] = 9;
+ x[3] = 13;</pre>`}">
+ <br>
+
+ 
+
+<input type=button value="7. Functions" onclick="{document.getElementById('myDiv01').innerHTML = `A piece of code that is designed to perform a specific task. Ex. 
+<pre> function Greeting() {
+     const d = new Date();
+     const h = d.getHours();
+
+     if (h <= 11) {
+
+         var greeting = 'Good Morning';
+
+     } else if (h >= 12 && h <= 16){
+
+         var greeting = 'Good Afternoon';
+
+     } else {
+
+         var greeting = 'Good Evening';
+
+     }
+     return document.getElementById('myDiv01').innerHTML =  greeting;
+     }</pre><br>This is the code used in the greeting at the top of the page`}">
+ <br>
+
+ 
+
+
+
+ <input type=button value="8. Objects" onclick="{document.getElementById('myDiv01').innerHTML = `Objects are collections of name-value pairs. Ex. <pre> var person = new Object();
+
+ person.firstName = John;
+ person.lastName = Doe;
+ person.age = 50;
+ person.eyeColor = blue;</pre>`}">
+ <br>
+
+
+
+ <input type=button value="9. Classes" onclick="{document.getElementById('myDiv01').innerHTML = `Classes are a template for creating objects, they encapsulate data with code to work on that data. Ex. <pre> class Car {constructor(name, year) {
+     this.name = name;
+     this.year = year;
+ }}</pre>`}">
+    
+<br>
+<br>
     
     <div id="myDiv01">...</div>
       
