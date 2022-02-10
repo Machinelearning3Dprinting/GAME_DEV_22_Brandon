@@ -1,46 +1,313 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color:Black; color:Lime">
+
+<script>
+function myImageMove() {
+
+setInterval(mySetImageMove, 10);
+}
+function mySetImageMove() {
+var i = 0;
+
+if (i < 200) {
+document.getElementById('myImage01').style.left = i + 'px';
+document.getElementById('myDiv01').innerHTML = 'it went left';
+i = i + 2;
+}
+}
+</script><br>
+
+<style>
+
+.button {
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color:Black; 
+  color:Lime; 
+  border: 2px solid Lime;
+}
+
+.button1:hover {
+  background-color:Lime;
+  color:Black;
+   border: 2px solid DarkGreen;
+}
+</style>
+
   <body>
+<title>Lists And Tables</title>
     
-    <h5 align=center>Version 0.0.1.2</h5>
+    <h5 align=center>Version 0.6.15.25</h5>
     
     <h1 align=center>T3A02-Lists-And-Tables-By-Brandon</h1>
     
     <h2>Lists</h2>
     
     <ol> Order list of fav foods (at least 5)
-      <li>pizza</li>
-      <li>cheeseburger</li>
-      <li></li>
+      <br><br>
+      <li>Pizza</li>
+      <li>Cheeseburgers</li>
+      <li>Sushi</li>
+      <li>Korean Beef Bowls</li>
+      <li>Tacos</li>
+      <li>Spicy Chicken Waffles</li>
       
       </ol>
     
     <ul> unordered list of countries (at least 5)
-      <li>canada</li>
-      <li>france</li>
+      <br><br>
+      <li>Canada</li>
+      <li>France</li>
+      <li>Brazil</li>
+      <li>Chile</li>
+      <li>China</li>
+      <li>Chad</li>
       
       </ul>
     
     <b>Assignment</b>. you make a list inside a list of multiple items<br>
-    
+
+<ol>
+<li>stuff<br>
+<ul>
+<li>more stuff</li>
+<li>blah blah blah</li>
+</ul></li> <br>
+<li>hello world</li>
+<ul>
+<li>x = 0</li>
+<li>y = 5</li>
+</ul>
+</ol>
+
+   
     <h2>Tables</h2>
     
-    <table border=1>
-      <tr><td>A</td><td>B</td></tr>
-      <tr><td>A</td><td>B</td></tr>
+    <table style="border:5px solid lime">
+      <tr><th>1</th>
+      <th>2</th></tr>
+      <tr><td>2</td>
+<td>4</td></tr>
       </table><br>
     
     <b>Assingment</b> make a 3x4 table, then make a link and image table with border = 0 <br><br><br>
-    
+
+  <table align=left style="border:5px solid lime">
+      <tr style="height:40px">
+      <th style="width:40px">1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+<th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+<th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      </tr>
+      
+<tr>
+<th>2</th>
+      <td>4</td>
+      <td>6</td>
+      <td>8</td>
+      <td>10</td>
+      <td>12</td>
+      <td>14</td>
+      <td>16</td>
+      <td>18</td>
+      <td>20</td>
+      <td>22</td>
+      <td>24</td>
+</tr>
+
+<tr>
+<th>3</th>
+      <td>6</td>
+      <td>9</td>
+      <td>12</td>
+      <td>15</td>
+      <td>18</td>
+      <td>21</td>
+      <td>24</td>
+      <td>27</td>
+      <td>30</td>
+      <td>33</td>
+      <td>36</td>
+</tr>
+
+<tr>
+<th>4</th>
+      <td>8</td>
+      <td>12</td>
+      <td>16</td>
+      <td>20</td>
+      <td>24</td>
+      <td>28</td>
+      <td>32</td>
+      <td>36</td>
+      <td>40</td>
+      <td>44</td>
+      <td>48</td>
+</tr>
+
+<tr>
+<th>5</th>
+      <td>10</td>
+      <td>15</td>
+      <td>20</td>
+      <td>25</td>
+      <td>30</td>
+      <td>35</td>
+      <td>40</td>
+      <td>45</td>
+      <td>50</td>
+      <td>55</td>
+      <td>60</td>
+</tr>
+
+<tr>
+<th>6</th>
+      <td>12</td>
+      <td>18</td>
+      <td>24</td>
+      <td>30</td>
+      <td>36</td>
+      <td>42</td>
+      <td>48</td>
+      <td>54</td>
+      <td>60</td>
+      <td>66</td>
+      <td>72</td>
+</tr>
+
+<tr>
+<th>7</th>
+      <td>14</td>
+      <td>21</td>
+      <td>28</td>
+      <td>35</td>
+      <td>42</td>
+      <td>49</td>
+      <td>56</td>
+      <td>63</td>
+      <td>70</td>
+      <td>77</td>
+      <td>84</td>
+</tr>
+
+<tr>
+<th>8</th>
+      <td>16</td>
+      <td>24</td>
+      <td>32</td>
+      <td>40</td>
+      <td>48</td>
+      <td>56</td>
+      <td>64</td>
+      <td>72</td>
+      <td>80</td>
+      <td>88</td>
+      <td>96</td>
+</tr>
+
+<tr>
+<th>9</th>
+      <td>18</td>
+      <td>27</td>
+      <td>36</td>
+      <td>45</td>
+      <td>54</td>
+      <td>63</td>
+      <td>72</td>
+      <td>81</td>
+      <td>90</td>
+      <td>99</td>
+      <td>108</td>
+</tr>
+
+<tr>
+<th>10</th>
+      <td>20</td>
+      <td>30</td>
+      <td>40</td>
+      <td>50</td>
+      <td>60</td>
+      <td>70</td>
+      <td>80</td>
+      <td>90</td>
+      <td>100</td>
+      <td>110</td>
+      <td>120</td>
+</tr>
+
+<tr>
+<th>11</th>
+      <td>22</td>
+      <td>33</td>
+      <td>44</td>
+      <td>55</td>
+      <td>66</td>
+      <td>77</td>
+      <td>88</td>
+      <td>99</td>
+      <td>110</td>
+      <td>121</td>
+      <td>132</td>
+</tr>
+
+<tr>
+<th>12</th>
+      <td>24</td>
+      <td>36</td>
+      <td>48</td>
+      <td>60</td>
+      <td>72</td>
+      <td>84</td>
+      <td>96</td>
+      <td>108</td>
+      <td>120</td>
+      <td>132</td>
+      <td>144</td>
+</tr>
+      </table><br>
+
+
+<table align=right style="border:5px solid lime">
+
+<tr style="height:40px">
+      <th style="width:40px">1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+<th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+<th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      </tr>
+
+</table>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     
     <h2>Advanced</h2>
     
     load an image and get it to move 10 pixels to the left using button below<br>
     
-    <image id="myImage01" src="" style="position:relative;left:0;top:0;width:50;height:50;"><br>
+    <image id="myImage01" src="https://images8.alphacoders.com/423/thumb-1920-423210.jpg" style="position:relative;left:0;top:0;width:25%;height:25%;"><br>
       
-      <input type=button value="go left" onclick="{document.getElementById('myImage01').style.left = '200px'
-                                                  document.getElementById('myDiv01').innerHTML = 'it went left'}">
+
+<button class="button button1" onclick="{myImageMove();}">Go Left</button>
       
       <div id="myDiv01">...</div>
       
