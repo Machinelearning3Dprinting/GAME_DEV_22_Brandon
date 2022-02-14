@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html style="background-color:Black; color:Lime">
+<html style="font-size:Large;background-color:Black; color:Lime">
 
 <script>
-function myImageMove() {
 
-setInterval(mySetImageMove, 10);
-}
-function mySetImageMove() {
-var i = 0;
-
-if (i < 200) {
-document.getElementById('myImage01').style.left = i + 'px';
 document.getElementById('myDiv01').innerHTML = 'it went left';
-i = i + 2;
-}
-}
 </script><br>
 
 <style>
+
+.li {
+transition-duration: 0s;
+cursor:default;
+}
+
+.li1 {
+color:Lime;
+text-shadow:0.5px 0.5px Red;
+}
+
+.li1:hover {
+color:Lime;
+text-shadow:none;
+}
 
 .button {
   transition-duration: 0.5s;
@@ -35,12 +39,18 @@ i = i + 2;
   color:Black;
    border: 2px solid DarkGreen;
 }
+
+
+td, th {
+border:1px solid white;
+}
+
 </style>
 
-  <body>
+  <body onload="document.getElementById('mymarquee').stop();">
 <title>Lists And Tables</title>
     
-    <h5 align=center>Version 0.6.15.25</h5>
+    <h5 align=center>Version 1.64.78.128</h5>
     
     <h1 align=center>T3A02-Lists-And-Tables-By-Brandon</h1>
     
@@ -87,10 +97,10 @@ i = i + 2;
     <h2>Tables</h2>
     
     <table style="border:5px solid lime">
-      <tr><th>1</th>
-      <th>2</th></tr>
+      <tr><td>1</td>
+      <td>2</td></tr>
       <tr><td>2</td>
-<td>4</td></tr>
+<td>1</td></tr>
       </table><br>
     
     <b>Assingment</b> make a 3x4 table, then make a link and image table with border = 0 <br><br><br>
@@ -278,22 +288,14 @@ i = i + 2;
       </table><br>
 
 
-<table align=right style="border:5px solid lime">
+<table align=right>
 
-<tr style="height:40px">
-      <th style="width:40px">1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-<th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-<th>9</th>
-      <th>10</th>
-      <th>11</th>
-      <th>12</th>
-      </tr>
+<tr style="height:40px;border:none">	<td style="width:80px;border:none" ><a class="li li1" href="https://th.bing.com/th/id/R.8e632b4dbd61ffe21316d0aa8fd99717?rik=S%2fVRgWs8B1QUSA&riu=http%3a%2f%2fwww.dumpaday.com%2fwp-content%2fuploads%2f2019%2f12%2fpictures-10-2.jpg&ehk=QH5i3EAxyZYJFl0N54KuqmERNBOpDvFxygcV4nlsxsk%3d&risl=&pid=ImgRaw&r=0">Squirrel</a></td>	<td style="border:none"><img src="https://th.bing.com/th/id/R.8e632b4dbd61ffe21316d0aa8fd99717?rik=S%2fVRgWs8B1QUSA&riu=http%3a%2f%2fwww.dumpaday.com%2fwp-content%2fuploads%2f2019%2f12%2fpictures-10-2.jpg&ehk=QH5i3EAxyZYJFl0N54KuqmERNBOpDvFxygcV4nlsxsk%3d&risl=&pid=ImgRaw&r=0" style="height:150px"></td>	</tr>
+
+<tr style="height:40px">	<td style="width:80px;border:none"><a class="li li1" href="https://laughingsquid.com/wp-content/uploads/2019/12/cat-mountain-animalsinthings.jpg">Cat Mountain</a></td>	<td style="border:none"><img src="https://laughingsquid.com/wp-content/uploads/2019/12/cat-mountain-animalsinthings.jpg" style="height:150px"></td>	</tr>
+
+<tr style="height:40px">	<td style="width:80px;border:none"><a class="li li1" href="https://th.bing.com/th/id/R.c2f840786ffd0feb598f06cd59f16a9e?rik=qu31ec%2b%2fvge8Ng&riu=http%3a%2f%2fimages1.fanpop.com%2fimages%2fimage_uploads%2fFunny-Things-random-967927_650_750.jpg&ehk=hlT6hkC44PkeIKiNBWWrZ1UvIbNKBX2A38kAuZLsLkM%3d&risl=&pid=ImgRaw&r=0">Bird</a></td>	<td style="border:none"><img src="https://th.bing.com/th/id/R.c2f840786ffd0feb598f06cd59f16a9e?rik=qu31ec%2b%2fvge8Ng&riu=http%3a%2f%2fimages1.fanpop.com%2fimages%2fimage_uploads%2fFunny-Things-random-967927_650_750.jpg&ehk=hlT6hkC44PkeIKiNBWWrZ1UvIbNKBX2A38kAuZLsLkM%3d&risl=&pid=ImgRaw&r=0" style="height:150px"></td>	</tr>
+
 
 </table>
 
@@ -307,8 +309,12 @@ i = i + 2;
     <image id="myImage01" src="https://images8.alphacoders.com/423/thumb-1920-423210.jpg" style="position:relative;left:0;top:0;width:25%;height:25%;"><br>
       
 
-<button class="button button1" onclick="{myImageMove();}">Go Left</button>
-      
+<marquee behavior="alternate" direction="right" id="mymarquee" scrollamount="500" width="auto">
+<img id="myImage" src="https://images8.alphacoders.com/423/thumb-1920-423210.jpg" style="position:absolute;left:0;top:0;width:2%;height:100%"><br>
+</marquee><br><br>
+<input class="button button1" type="button" value="Start Image Move" onClick="document.getElementById('mymarquee').start(); document.getElementById('myDiv01').innerHTML = 'Moving';">
+<input class="button button1" type="button" value="Stop Image Move" onClick="document.getElementById('mymarquee').stop(); document.getElementById('myDiv01').innerHTML = 'Stopped';">
+
       <div id="myDiv01">...</div>
       
       </body>
