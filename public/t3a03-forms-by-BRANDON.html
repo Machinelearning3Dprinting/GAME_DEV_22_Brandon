@@ -1,83 +1,82 @@
-<html style="background-color:Black;color:White;font-size:large;text-shadow: 2px 2px Red"><br>
-<head>
-
-  <script>
-   
-  </script>
-
-
-</head>
+<html style="background-color:Black;color:Red;font-size:large;text-shadow: 1px 1px grey"><br>
   
     <title> T3A03-forms-by-Brandon.html</title>
 
-  <h5>Version 0.2.5.7</h5>
+  <h5 align=center>Version 0.52.54.102</h5>
 <h1 align=center>T3A03-forms-Brandon.html</h1>
+<form>
+<br> <br>
+Text: <input id="mytext01" type="text"><br>
+Numbers: <input id="mynum01" type="number"><br>
+Password:<input type="password"><br> <br> <br>
 
-<b> blah blah </b> <br> <br>
-Create a Username: <input id="mytext01"type=text"><br>
-Create a Login ID:<input id="mynum01"type=number"><br>
-Create a Password:<input type="password"><br> <br> <br>
+
  
-<b> Choose your character's eye color. </b> <br> <br>
+<b> Eye Color. </b> <br> <br>
 
-Hazel: <input name="Abhay" type="radio"><br>
-Brown: <input name="Abhay" type="radio"><br>
-Green: <input name="Abhay" type="radio"><br>
-Green: <input name="Abhay" type="radio"><br> <br> <br>
+Hazel: <input name="rad1" type="radio"><br>
+Brown: <input name="rad1" type="radio"><br>
+Green: <input name="rad1" type="radio"><br>
+Blue: <input name="rad1" type="radio"><br> <br> <br>
 
-<b> Choose your character's weapons. </b> <br> <br>
+<b> Favorite Subject. </b> <br> <br>
 
-Sword: <input type="checkbox"><br>
-Crossbow: <input type="checkbox"><br>
-Shield: <input type="checkbox"><br>
-Gun: <input type="checkbox"><br>
-Bat: <input type="checkbox"><br> <br> <br>
+Math: <input type="checkbox"><br>
+Physics: <input type="checkbox"><br>
+Woodwork: <input type="checkbox"><br>
+Metalwork: <input type="checkbox"><br>
 
-<b> Choose your Character's power </b> <br> <br>
+<br><br>
 
-Fire: <input name="Abhay" type="radio"><br>
-Water: <input name="Abhay" type="radio"><br>
-Air: <input name="Abhay" type="radio"><br>
-Gravity: <input name="Abhay" type="radio"><br> <br> <br> 
+<b> Choose Elemental Super Power </b> <br> <br>
 
-<b> Choose your character's gender </b> <br> <br>
+Fire: <input name="rad2" type="radio"><br>
+Water: <input name="rad2" type="radio"><br>
+Air: <input name="rad2" type="radio"><br>
+Gravity: <input name="rad2" type="radio"><br> <br> <br> 
 
-Male: <input name="Abhay" type="radio"><br>
-Female: <input name="Abhay" type="radio"><br>
-Other: <input name="Abhay" type="radio"><br> <br> <br>
+<b> Choose Gender </b> <br> <br>
 
-<b> Choose your character's summoning </b> <br> <br> 
-
-Shark: <input type="checkbox"><br>
-Lion: <input type="checkbox"><br>
-Wolf: <input type="checkbox"><br>
-Eagle: <input type="checkbox"><br> <br> <br>
+Male: <input name="rad3" type="radio"><br>
+Female: <input name="rad3" type="radio"><br>
+Other: <input name="rad3" type="radio"><br> <br> <br>
 
 <b> Please give us some feedback, so we can improve your experience. </b> <br> <br>
-<textarea if="myArea01" rows=10 cols=25>
-	
-</textarea> <br> <br>
+<textarea id="myArea1" rows="4" cols="50" placeholder="Type Here!!"></textarea>
+<br> <br>
  
-Reset: <input type="reset"><br>
-Submit: <input type="submit"><br> <br> <br>
-
-<input type=button value="Click for a Surprise" onclick="{
-alert('Surprise!!!')
-}"><br>
+Reset: <input type="reset" value="Reset"/><br>
+Submit: <input type="submit" value="Submit"><br> <br> <br>
 
 Button: <input type=button value="click" onClick="{
-	document.getElementById('myArea01').value='cool'
-	}"><br>
+	document.getElementById('myArea2').value='cool'
+	}"><br><br>
+
 Textarea:<br>
-Textarea:<br>
-<textarea id="myArea01" cols=60 rows=5 > wow </textarea><br>
+<textarea id="myArea2" cols="60" rows="5" placeholder="WOW!!"></textarea><br>
 
 Select Box:<br>
-<select id="mySelect01" size=2
-	<option value='fjf'> onClick="{
-	document.getElementById('myArea01').value='yess'
+<select id="mynumbers" name="numbers" size=1
+	<option onClick="{
+	document.getElementById('mydiv').innerHTML = value
 	}">
-<option value='myTwo'>Two
-	<option value='myThree'>Three
+<option value='Zero'>Zero
+<option value='One'>One
+<option value='Two'>Two
+<option value='Three'>Three
+
+
 </select>
+<div id="mydiv">...</div><br><br>
+
+<input type="file" name="image"><br><br>
+
+Date: <input type="date" name="Startdate"><br><br>
+
+URL: <input type="url" name="website" placeholder="http://example.com"><br><br>
+
+Phone#: <input type="tel" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+
 </form>
+
+</html>
