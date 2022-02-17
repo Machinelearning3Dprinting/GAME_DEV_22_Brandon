@@ -1,14 +1,77 @@
+<html id="myWebPage">
 
+Version 0.10.20.50
 
-Version 0.1.2
+<style>
+option, select {
+cursor:pointer;
+}
 
+</style>
+
+<script>
+
+function myFixColors() {
+const myNewColor = document.getElementById('myColors').value
+const myNewBGColor = document.getElementById('myBGColors').value
+
+if(myNewBGColor === myNewColor || (myNewBGColor === 'inherit' && myNewColor === 'White') || (myNewBGColor === 'Black' && myNewColor === 'inherit')){
+		document.getElementById('myWebPage').style.color = 'inherit';
+		document.getElementById('myWebPage').style.backgroundColor = 'inherit';
+		document.getElementById('myColors').value = 'inherit';
+		document.getElementById('myBGColors').value = 'inherit';
+	}
+
+}
+
+</script>
+<div style="float: right;">
+Text Color:
+<select id="myColors" name="Colors" size=1
+	<option onChange="{
+	//document.getElementById('mydiv').innerHTML = value
+	const myNewColor = document.getElementById('myColors').value
+	const myNewBGColor = document.getElementById('myBGColors').value
+	document.getElementById('myWebPage').style.color = myNewColor
+	myFixColors()
+	
+	
+		
+	}">
+<option value='inherit'>Defualt
+<option value='Black'>Black
+<option value='White'>White
+<option value='Red'>Red
+<option value='Green'>Green
+<option value='Blue'>Blue
+</select>
+<br>
+BG color:
+<select style="float: right;" id="myBGColors" name="Colors" size=1
+	<option onChange="{
+	//document.getElementById('mydiv1').innerHTML = value
+	const myNewBGColor = document.getElementById('myBGColors').value
+	document.getElementById('myWebPage').style.backgroundColor = myNewBGColor
+	myFixColors()
+}">
+<option value='inherit'>Defualt
+<option value='Black'>Black
+<option value='White'>White
+<option value='Red'>Red
+<option value='Green'>Green
+<option value='Blue'>Blue
+
+</select>
+</div>
+<!--color:<div id="mydiv">...</div>
+BG color:<div id="mydiv1">...</div>-->
 <head>
     <title>Input/Output</title>
     </head>
 
-<h2 align=center>t1a05-Input-Output-By-Brandon</h2>
+<h2 align=center>T1A05-Input-Output-By-Brandon</h2>
 
-<a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good reference to input putput 
+<a style="background-color:Black" href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good reference to input putput 
 Javascript innerHTML value by Fred</a>
 
 <h4> Example input output code</h4>
@@ -19,15 +82,58 @@ Javascript innerHTML value by Fred</a>
 
 <h4> Example working code</h4>
 
-<input id="myNum01" type=number value="4" ><br> 
+<input id="myNum01" type=number value="" placeholder="#Numbers"><br> 
 
-<input type=button value="myEvent squares" onclick="{
+<input type=button value="Square" onclick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
-    let myAnswer = myIn01 * myIn01
-    document.getElementById('myDiv01').innerHTML = 
-      myIn01 + ' squared = ' + myAnswer
+    var myAnswer = myIn01 * myIn01;
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myAnswer
+    var myAnswer = myIn01 ** myIn01;
+    document.getElementById('myDiv02').innerHTML = myIn01 + ' to the power of ' + myIn01 + ' = ' + myAnswer;
+}"><br>
+
+<input type=button value="Add/Subtract" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+    var myAnswer = myIn01 + myIn01;
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' + ' + myIn01 + ' = ' + myAnswer
+    var myAnswer = myIn01 - myIn01;
+    document.getElementById('myDiv02').innerHTML = myIn01 + ' - ' + myIn01 + ' = ' + myAnswer;
 }"><br>
 
 <div id="myDiv01">...</div>
+<div id="myDiv02">...</div>
+
+<br><br>
+
+<input id="myString01" type=text value="hello world" placeholder="Add the same words together"><br> 
+
+<input type=button value="Add" onclick="{
+    let myIn01 = document.getElementById('myString01').value
+    var myAnswer = myIn01 + myIn01;
+    document.getElementById('myDiv03').innerHTML = myIn01 + ' + ' + myIn01 + ' = ' + myAnswer
+}"><br>
+
+<div id="myDiv03">...</div>
+<div id="myDiv04">...</div>
+
+<br><br>
 
 
+
+
+
+
+
+
+<input style="display:inline"id="myString02" type=text value="hello" placeholder="Add word 1"> 
+<span>And</span>
+<input align=right id="myString03" type=text value="world" placeholder="Add word 2"><br><br> 
+
+<input style="position:relative;left:175px" type=button value="Add" onclick="{
+    let myIn01 = document.getElementById('myString02').value
+    let myIn02 = document.getElementById('myString03').value
+    var myAnswer = myIn01 + myIn02;
+    document.getElementById('myDiv05').innerHTML = myIn01 + ' + ' + myIn02 + ' = ' + myAnswer
+}"><br>
+
+<div id="myDiv05">...</div>
