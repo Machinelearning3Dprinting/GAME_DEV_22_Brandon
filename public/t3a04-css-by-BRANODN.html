@@ -1,4 +1,4 @@
-<html style="background-color:Black;color:red;font-size:large">
+<html style="color:red;font-size:large">
 
 
 <head>
@@ -15,13 +15,47 @@ background-color: black;
 
 }
 
+.li {
+transition-duration: .5s;
+cursor:pointer;
+}
+
+.li1 {
+color:Darkgrey;
+text-shadow:1.5px 1.5px Red;
+}
+
+.li1:hover {
+color:blueviolet;
+text-shadow:none;
+}
+
+
+
+.ta {
+  position: relative;
+  transition-duration: 0.5s;
+}
+
+.ta1 {
+  opacity: 100;
+  left: 0px;
+
+}
+
+.ta1:focus {
+
+  opacity: 0;
+  left:1000px
+
+}
 
   </style>
 
 <script>
 
 function myReload() {
-window.location.href = "https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/index.html";
+  window.open("https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/index.html");
 
 }
     
@@ -57,14 +91,14 @@ window.location.href = "https://machinelearning3dprinting.github.io/GAME_DEV_22_
 
 
 
-<h5 align=center>Version 0.13.5.18</h5>
+<h5 align=center>Version 0.50.32.101</h5>
 
 <br><br>
 
 <h1 align=center>T1A04 CSS by Brandon</h1>
 
 Reference Link 
-<a style="background-color:White;color:Lime;text-shadow: 1px 1px Black" href="https://www.w3schools.com/cssref/default.asp">w3schools</a><br>
+<a class="li li1" href="https://www.w3schools.com/cssref/default.asp">w3schools</a><br>
 
 Properly done with a .css file listing all css commands for your
 website<br>
@@ -87,12 +121,17 @@ I do CSS inside the tag. It overpowers all other methods<br>
 <input type=button value=Change onclick="{
     document.getElementById('myB1').style.color = 'Black'
     document.getElementById('myB1').style.backgroundColor = 'Red'
+}">
+
+<input type=button value=reset onclick="{
+  document.getElementById('myB1').style.color = 'cyan'
+  document.getElementById('myB1').style.backgroundColor = 'blue'
 }"><br>
 
 
 
-<textarea style="position:relative; left:0; top:0; width:200; height:50; ">
-Advanced see if you move this textarea
+<textarea Class="ta ta1 taMove taMove1" style="position:relative; top:0; width:200; height:50;" onkeypress="style='opacity:100;'">
+TYPE IN ME!!!
 </textarea><br>
 
 
