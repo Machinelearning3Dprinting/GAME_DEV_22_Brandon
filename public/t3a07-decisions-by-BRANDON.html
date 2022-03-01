@@ -2,6 +2,18 @@
 
 <html>
 
+
+
+<style>
+
+pre {
+background-color:Black;
+display:Table;
+margin: 0px 0px 0px 0px;
+}
+
+</style>
+
     <script>
         function Greeting() {
             const d = new Date();
@@ -45,7 +57,7 @@
 
 <body onload="mybackground();" onresize="mybackground();">
 
-Version 0.5.15.30
+Version 0.10.15.40
 
 <h2 align=center>T3A07-Decision-By-Brandon.html</h2>
 
@@ -103,6 +115,55 @@ Try 100-104, 105-<b style="font-size:x-large">∞</b> <br>
 }">
 
 <div id="mygreeting">...</div>
+<br>
+
+<h3><b>greeting code</b></h3>
+<pre>
+    function Greeting() {
+        const d = new Date();
+        const h = d.getHours();
+        if (h <= 11) {
+        var greeting = 'Good Morning';
+        } else if (h >= 12 && h <= 16){
+        var greeting = 'Good Afternoon';
+        } else {
+        var greeting = 'Good Evening';
+        }
+        return document.getElementById('mygreeting').innerHTML =  greeting;
+        }
+
+</pre>
+
+<br><br>
+
+<h3><b>mybackground code</b></h3>
+
+<pre>
+
+    function mybackground() {  
+      var W = window.innerWidth;
+      
+      if (W > 1000) {
+        
+        document.body.style.backgroundImage = "url('https://images.nintendolife.com/4042789524201/star-wars.large.jpg')";
+        document.body.style.backgroundRepeat = "repeat";
+        document.body.style.backgroundSize = "100vw auto";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.fontSize = "inherit";
+        document.body.style.color = "White";
+      }  else {
+        
+        document.body.style.backgroundImage = "url('https://wallpapersmug.com/download/1125x2436/c11269/robot-minimal-star-wars.jpg')";
+        document.body.style.backgroundRepeat = "repeat";
+        document.body.style.backgroundSize = "100vw auto";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.fontSize = "XX-large";
+        document.body.style.color = "mediumvioletred";
+      }
+    }
+    mybackground();
+
+</pre>    
 
 </body>
 
