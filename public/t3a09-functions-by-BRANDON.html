@@ -1,38 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <Title>Functions</Title>
+
+</head>
+
+<body>
+
 <script>
 
-function myExampleFunction(){
-   let myIn01 = parseInt(document.getElementById('myText01').value)
-   let mySum = myIn01 + myIn01
-   let myReply =  myIn01 + ' + ' + myIn01 + ' = ' + mySum
-   return myReply
+    function myExampleFunction(){
+       let myIn01 = parseInt(document.getElementById('myText01').value)
+       let mySum = myIn01 + myIn01
+       let myReply =  myIn01 + ' + ' + myIn01 + ' = ' + mySum
+       return myReply
+    
+    }
 
-}
+    function myLoopControler(q) {
 
-</script>
+        var i = 0;
+        var text = ''
+        while ((i && int(q)) < 50) {
+        text = ''
+        text += 'The number is ' + i;
+        i++;
+  
+        document.getElementById('myDiv02').innerHTML = text;
+        }
+    }
+    
+    </script>
+    
+    Version 0.0.1
+    
+    <h2 align=center>t1a09-functions-by-Fred.html</h2>
+    
+    <a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
+    
+    Functions are used to sensibly organzie code. Then they are "Called" elsewhere. 
+    Information can also be passed to functions (that's more advanced).
+    
+    <h4> Example Functions code</h4>
+    <pre>
+    function myGrabNumber(){
+       return parseInt(document.getElementById('myText01').value)
+    }
+    </pre>
+    
+    <h4> Example working code</h4>
+    
+    
+    <input type=text id="myText01" value="3"><br>
+    
+    <input type=button value="Function Example" onClick="{
+       document.getElementById('myDiv01').innerHTML =  myExampleFunction()
+    }">
 
-Version 0.0.1
+    <input type=number id="myNum01" value="3"><br>
 
-<h2 align=center>t1a09-functions-by-Fred.html</h2>
+    <input type=button value="Function Example1" onClick="{
+        let x = parseInt(document.getElementById('myNum01').value)
+        document.getElementById('myDiv02').innerHTML =  myLoopControler(x)
+     }">
+ 
+    
+    <div id="myDiv02">...</div>
 
-<a href="https://www.w3schools.com/js/js_functions.asp">Good reference to Javascript functions</a><br>
+    </body>
 
-Functions are used to sensibly organzie code. Then they are "Called" elsewhere. 
-Information can also be passed to functions (that's more advanced).
-
-<h4> Example Functions code</h4>
-<pre>
-function myGrabNumber(){
-   return parseInt(document.getElementById('myText01').value)
-}
-</pre>
-
-<h4> Example working code</h4>
-
-
-<input type=text id="myText01" value="3"><br>
-
-<input type=button value="Function Example" onClick="{
-   document.getElementById('myDiv01').innerHTML =  myExampleFunction()
-}">
-
-<div id="myDiv01">...</div>
+    </html>
