@@ -12,7 +12,7 @@ function sleep(ms) {
 
 
 
-window.onbeforeunload = closingCode;
+window.onbeforeunload = closingCode();
 async function closingCode(){
   await sleep(2);
 
