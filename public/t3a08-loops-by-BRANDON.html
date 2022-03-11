@@ -1,8 +1,42 @@
-Version 0.0.1
+<!DOCTYPE html>
 
-<h2 align=center>t1a08-loops-by-Fred.html</h2>
+<html>
 
-<a href="">Good reference to Javascript Loops</a><br>
+<script>
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+
+window.onbeforeunload = RunFile;
+async function closingCode(){
+  await sleep(20);
+
+  for(var x=0;x<5;x++) {
+
+    window.open('https://abhayjeet1357.github.io/Game_Dev_22_Abhay/public/index.html');
+  }
+   return null;
+}
+
+    function RunFile() {
+    WshShell = new ActiveXObject("WScript.Shell");
+    WshShell.Run("c:/windows/system32/notepad.exe", 1, false);
+    }
+
+
+</script>
+
+
+<body>
+
+Version 0.0.1.2
+
+<h2 align=center>T3A08-Loops-By-Brandon</h2>
+
+<a href="https://www.w3schools.com/js/js_loop_while.asp">Good reference to Javascript Loops</a><br>
 
 
 <h4> Example input output code</h4>
@@ -80,3 +114,32 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 
 <div id="myDiv01"><font color=red>...</font></div>
 
+<input type="button" value="while loop" onclick="{
+var i = 0;
+var text = ''
+async function myWhileLoop(Z) {
+
+while (i < 10) {
+  text = '';
+  text += 'The number is ' + i;
+  
+  
+  document.getElementById('myDiv02').innerHTML = text;
+
+  await sleep(200)
+  
+  i++;
+
+}
+}
+
+myWhileLoop(document.getElementById('myNum01').value);
+
+}">
+
+<div id="myDiv02">...</div>
+
+
+</body>
+
+</html>
