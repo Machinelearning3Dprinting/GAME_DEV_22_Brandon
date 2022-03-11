@@ -1,5 +1,150 @@
 <!DOCTYPE html>
 
-<html>
+<html style="color:#8a5cae;font-size:x-large;text-shadow: 1.5px 1.5px pink"><br>
+ <title>
+Events
+</title>
   
-  </html>
+ 
+Version 0.13.52</br>
+<h1 align=center>T3A10-Events-by-Brandon</h1>
+
+Reference Link to a helpful website.
+<a href="https://www.w3schools.com/cssref/default.asp">w3schools</a><br><br><br>
+
+
+
+<textarea style="position:relative; left:0; top:0; width:200; height:50;" id="i1">
+Hello! Click start to see me move.
+</textarea><br>
+<input type=button class="button" onClick=timer() value='Start'>
+<input type=button class="button" onClick=reset1() value='Reset'>
+<div id='msg'></div><br><Br><br>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+<video id="myVideo" width="500" height="500" autoplay controls onratechange="myFunction()">
+  <source src="https://sd75-my.sharepoint.com/personal/2293216_learn75_ca/Documents/g10-Sid-Abhay-web-design-marking/public/movie.mp4" type="video/mp4">
+
+</video><br>
+ 
+</video>
+<p id="demo">Change the speed of the video</p>
+<input type="range" min="0.1" max="3" step="0.1" value="1"oninput="changeRate(this)">
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "The video's speed is " + document.getElementById("myVideo").playbackRate;
+}
+
+function changeRate(obj) {
+  document.getElementById("myVideo").playbackRate = obj.value;
+}
+</script> 
+
+
+</body> 
+
+
+<br><br>
+<h1 style="text-decoration:underline;" align=center>Hover Over this image</h1>
+
+<h1 align=center><img src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/Sam.gif?raw=true" alt="Electric Car" width="900" height="500"></h1> <br> <br> <br>
+
+
+
+
+
+<body>
+
+
+Enter your name: <input type="text" class="button2" id="fname" onchange="upperCase()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+
+
+<br><br>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+
+<br><br><br>
+
+
+
+
+<br><br><br>
+
+
+<body>
+
+<p>Press any key on the keyboard in the input field to get the location of the key.</p>
+
+<input type="text" size="40" onkeydown="myFunction(event)">
+
+<p>Possible return values:</p>
+
+<ul>
+  <li>0 represents a standard key (like "A")</li>
+  <li>1 represents a left key (like the left CTRL key)</li>
+  <li>2 represents a right key (like the right CTRL key)</li>
+  <li>3 represents a key on the numeric keypad (like the number "2" on the right keyboard side)</li>
+</ul>
+
+
+<p id="demo2"></p>
+
+<script>
+function myFunction(event) {
+  var x = event.location;
+  document.getElementById("demo2").innerHTML = "Key location: " + x;
+}
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
