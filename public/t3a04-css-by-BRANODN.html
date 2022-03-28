@@ -6,11 +6,17 @@
 </head>
 
 
+
 <style>
 
 h5, h1 {
   display: Table;
 margin: 25px auto 0px auto;
+background-color: black;
+
+}
+
+b {
 background-color: black;
 
 }
@@ -50,14 +56,29 @@ text-shadow:none;
 
 }
 
+@keyframes colorChange {
+
+  10% {color: blue; background-color: black;}
+  20% {color: orange; background-color: white;}
+  30% {color:aqua; background-color: brown;}
+  40% {color:black; background-color: beige;}
+  50% {color:lime; background-color: darkviolet;}
+  60% {color:magenta; background-color: khaki;}
+  70% {color:yellow; background-color: orangered;}
+  80% {color:hotpink; background-color: darkred;}
+  90% {color:lightsalmon; background-color: indianred;}
+  100% {color:plum; background-color: green;}
+  
+}
+
   </style>
 
 <script>
 
-function myReload() {
-  window.open("https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/index.html");
+//function myReload() {
+  //window.open("https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/index.html");
 
-}
+//}
     
     function mybackground() {  
       var W = window.innerWidth;
@@ -81,17 +102,18 @@ function myReload() {
     }
     
     mybackground();
+
     </script>
 
 
 
 
 
-<body style="background-color: black;" onunload="myReload();" onload="mybackground();" onresize="mybackground();">
+<body style="background-color: black;" onunload="/*myReload();*/" onload="mybackground();" onresize="mybackground();">
 
 
 
-<h5 align=center>Version 0.52.32.105</h5>
+<h5 align=center>Version 1.80.50.175</h5>
 
 <br><br>
 
@@ -117,22 +139,18 @@ b {
 I do CSS inside the tag. It overpowers all other methods<br>
 
 <b > This is bold</b><br>
-<b id="myB1" style="color:Cyan; background-Color:blue; "> This is bold</b>
-<input type=button value=Change onclick="{
-    document.getElementById('myB1').style.color = 'Black'
-    document.getElementById('myB1').style.backgroundColor = 'Red'
+<b id="myB1"> This is bold</b>
+<input type='button' value='Change' onclick="{
+    document.getElementById('myB1').style.animation = 'colorChange 5s infinite';
 }">
 
-<input type=button value=reset onclick="{
-  document.getElementById('myB1').style.color = 'cyan'
-  document.getElementById('myB1').style.backgroundColor = 'blue'
+<input type='button' value='reset' onclick="{
+  document.getElementById('myB1').style.animation = 'none';
 }"><br>
 
 
 
-<textarea Class="ta ta1 taMove taMove1" style="position:relative; top:0; width:200; height:50;" onkeypress="style='opacity:100;'">
-TYPE IN ME!!!
-</textarea><br>
+<textarea placeholder="TYPE IN ME!!!" Class="ta ta1 taMove taMove1" style="position:relative; top:0; width:200; height:50;" onkeypress="style='opacity:100;'"></textarea><br>
 
 
 </body>
