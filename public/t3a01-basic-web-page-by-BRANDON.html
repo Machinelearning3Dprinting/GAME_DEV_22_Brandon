@@ -5,20 +5,19 @@
 
 <h4 id="mygreetingdiv" style="display:inline">...</h4>
 
-<script>
-function Greeting() {
-    const d = new Date();
-    const h = d.getHours();
-    if (h <= 11) {
-    var greeting = 'Good Morning';
-    } else if (h >= 12 && h <= 16){
-    var greeting = 'Good Afternoon';
-    } else {
-    var greeting = 'Good Evening';
-    }
-    return document.getElementById('mygreeting').innerHTML =  greeting;
-    }
-</script><br>
+
+<!--Needs some fixing-->
+<!--<script>
+function myReloadPage() {
+    window.location.reload();
+}
+function CheckRefresh(){
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+    document.getElementById('myChangingButton').value = "You Clicked Me";
+}
+}
+setInterval(CheckRefresh(), 10);
+</script><br>-->
 
 
 
@@ -37,6 +36,24 @@ h1, h2, h3, h4, h5 {
 background-color:Black;
 display:Table;
 margin: 0px auto 0px auto;
+}
+
+
+.button {
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color:Black; 
+  color:darkcyan; 
+  border: 2px solid slateblue;
+}
+
+.button1:hover {
+  background-color:slateblue;
+  color:Black;
+   border: 2px solid darkcyan;
 }
 
 
@@ -87,7 +104,7 @@ function Greeting() {
     </script>
   
   <body onload="mybackground();Greeting()" onresize="mybackground();Greeting();">
-    <h5 align=center>Version 1.56.30.94</h5>
+    <h5 align=center>Version 1.70.40.128</h5>
     <h1 align=center>T3A01-Basic-Web-Page-By-BRANDON.html</h1>
     <a style="color:Red" href="http://www.google.ca">Google</a><br>
     Plain Text <b> BOLD </b> and <i> Italic </i> can you put them together<br>
@@ -107,6 +124,10 @@ function Greeting() {
     
     <span>this is a</span>
     <span>span</span>
+    <hr>
+
+    <input style="display:Table;margin: 0px auto 0px auto;padding:10px 20px;width:100%" type="button" id="myChangingButton" class="button button1" value="CLICK ME!!" onclick="{document.write('EASY BUTTON!!!<br>');document.write('<input type=\'button\' value=\'EASY\' onClick=\'{myReloadPage()}\'><br>');document.write('<pre>document.write(\'&ltinput type=\'button\' value=\'EASY\' onClick=\'{myReloadPage()}\'>&ltbr>\');</pre>');document.write('HARD BUTTON!!<br>');const btn = document.createElement('button');btn.innerHTML='HARD';document.body.appendChild(btn);btn.addEventListener('click', myReloadPage);document.write('<br><pre>const btn = document.createElement(\'button\');<br>btn.innerHTML=\'HARD\';<br>document.body.appendChild(btn);<br>btn.addEventListener(\'click\', myReloadPage);</pre>')}">
+
     <hr>
     
     <h3>Write about Ellis' 10 main areas of coding</h3>
@@ -144,8 +165,8 @@ function Greeting() {
     }</pre> `}">
  <br>
 
-<!--FIXING NEEDED-->
-<input type=button value="5. Events" onclick="{document.getElementById('myDiv01').innerHTML = `Code that reacts to user input and makes something happen. Ex.<br><pre> &ltbutton onclick=document.getElementById('demo').innerHTML = Date();&gtThe time is?&lt/button&gt<pre>`}">
+
+<input type=button value="5. Events" onclick="{document.getElementById('myDiv01').innerHTML = 'Code that reacts to user input and makes something happen. Ex.<br><pre> &ltbutton onclick=document.getElementById(\'demo\').innerHTML = Date();>The time is? <\u2571button\&gt;<pre>'}">
  <br>
 
 <input type=button value="6. Array" onclick="{document.getElementById('myDiv01').innerHTML = `Special type of objects that use numbers to access their elements. Ex. <pre> x = [1, 5, 9, 13];
