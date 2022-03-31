@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html style="font-size: large;color: white;background-color: black;">
 
 <head><title>Loops</title></head>
 
@@ -10,11 +10,12 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+//localStorage.setItem("torture", closingCode());
 
 
-window.onbeforeunload = closingCode();
+//window.onbeforeunload = localStorage.getItem("torture"); //closingCode;
 async function closingCode(){
-  await sleep(2);
+  await sleep(60000);
 
   for(var x=0;x<5;x++) {
 
@@ -28,7 +29,7 @@ async function closingCode(){
 
 <body>
 
-Version 0.0.1.2
+Version 1.10.50.60
 
 <h2 align=center>T3A08-Loops-By-Brandon</h2>
 
@@ -113,16 +114,21 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 <input type="button" value="while loop" onclick="{
 var i = 0;
 var text = ''
+var Z = document.getElementById('myNum01').value;
 async function myWhileLoop(Z) {
 
-while (i < 10) {
+while (i <= Z) {
   text = '';
   text += 'The number is ' + i;
   
   
   document.getElementById('myDiv02').innerHTML = text;
 
-  await sleep(200)
+  if (Z > 10){
+    await sleep(5);
+  } else if (Z <= 10) {
+    await sleep(200);
+  }
   
   i++;
 
@@ -131,6 +137,25 @@ while (i < 10) {
 
 myWhileLoop(document.getElementById('myNum01').value);
 
+}">
+
+<input type='button' value='abc' onclick="{
+  async function myABCS() {  
+    var ABC = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','P','Q','R','S','T','U','V','W','X','Y','Z','A For Loop Used To Iterate Through An Array']
+    var i = 0;
+
+    for (i;i in ABC;i++){
+
+      document.getElementById('myDiv02').innerHTML = ABC[i];
+      //document.getElementById('myDiv02').innerHTML = i;
+      await sleep(200);
+
+      if (i >23) {
+        await sleep(2000);
+      }
+  }
+  }
+  myABCS();
 }">
 
 <div id="myDiv02">...</div>
