@@ -4,21 +4,44 @@
  <title>
 Events
 </title>
+
+<style>
+.ta {
+  position: relative;
+  transition-duration: 0.5s;
+}
+
+.ta1 {
+  opacity: 100;
+  left: 0px;
+
+}
+
+.ta1:focus {
+  position: relative;
+  opacity: 0;
+  left:1000px
+
+}
+  </style>
   
+  <body onload="document.getElementById('mymarquee').stop();">
  
-Version 0.5.5.10</br>
+Version 0.10.10.30</br>
 <h1 align=center>T3A10-Events-by-Brandon</h1>
 
 Reference Link to a helpful website.
 <a href="https://www.w3schools.com/cssref/default.asp">w3schools</a><br><br><br>
 
 
-
-<textarea style="position:relative; left:0; top:0; width:200; height:50;" id="i1">
+<marquee behavior="alternate" direction="right" id="mymarquee" scrollamount="100" width="auto">
+<textarea style="width:200; height:50;" id="i1">
 Hello! Click start to see me move.
-</textarea><br>
-<input type=button class="button" onClick=timer() value='Start'>
-<input type=button class="button" onClick=reset1() value='Reset'>
+</textarea>
+</marquee>
+<br>
+<input type=button onClick="document.getElementById('mymarquee').start(); document.getElementById('msg').innerHTML = 'Moving';" value='Start'>
+<input type=button onClick="document.getElementById('mymarquee').stop(); document.getElementById('msg').innerHTML = 'Stopped';" value='Stopped'>
 <div id='msg'></div><br><Br><br>
 
 
