@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html style="background-color:Black;color:Fuchsia;text-decoration: overline; text-shadow:Lime 1px 1px, red 2px 2px, white 3px 3px, cyan 4px 4px, pink 5px 5px,yellow 6px 6px, indigo 7px 7px, purple 8px 8px,  9px 9px, Lime 10px 10px,Lime 11px 11px, red 12px 12px,Lime 13px 13px, red 14px 14px, Lime 15px 15px,Lime 16px 16px, red 17px 17px,Lime 18px 18px, red 19px 19px, Lime 20px 20px;font-weight:heavy; font-size: xx-large;">
 
 <head>
     
@@ -12,30 +12,30 @@
 
 <script>
 
-    function myExampleFunction(){
-       let myIn01 = parseInt(document.getElementById('myText01').value)
-       let mySum = myIn01 + myIn01
-       let myReply =  myIn01 + ' + ' + myIn01 + ' = ' + mySum
-       return myReply
+    function myFN(){
+       let myIn01 = parseInt(document.getElementById('myText01').value);
+       let mySum = myIn01 + myIn01;
+       let myReply =  myIn01 + ' + ' + myIn01 + ' = ' + mySum;
+       return myReply;
     
     }
 
     function myLoopControler(q) {
 
         var i = 0;
-        var text = ''
-        while ((i && int(q)) < 50) {
-        text = ''
-        text += 'The number is ' + i;
-        i++;
-  
+        var text = '';
+        for (i;(i+q) <= 50;i++) {
+           
+        text = 'The number is ' + i;
+
         document.getElementById('myDiv02').innerHTML = text;
         }
+        
     }
     
     </script>
     
-    Version 0.0.2
+    Version 0.0.1
     
     <h2 align=center>T3A09-Functions-By-Brandon</h2>
     
@@ -54,17 +54,18 @@
     <h4> Example working code</h4>
     
     
-    <input type=text id="myText01" value="3"><br>
+    <input type=number id="myText01" value="3"><br>
     
     <input type=button value="Function Example" onClick="{
-       document.getElementById('myDiv01').innerHTML =  myExampleFunction()
+       document.getElementById('myDiv01').innerHTML =  myFN();
     }">
+    <div id="myDiv01">...</div>
 
     <input type=number id="myNum01" value="3"><br>
 
     <input type=button value="Function Example1" onClick="{
-        let x = parseInt(document.getElementById('myNum01').value)
-        document.getElementById('myDiv02').innerHTML =  myLoopControler(x)
+        var x = parseInt(document.getElementById('myNum01').value)
+        myLoopControler(x);
      }">
  
     
