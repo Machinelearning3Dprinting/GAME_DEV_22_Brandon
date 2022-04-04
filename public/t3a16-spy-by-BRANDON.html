@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>SPY</title>
+</head>
+
+<style>
+    textarea {
+        width: auto;
+        height: auto;
+        color: lime;
+        background-color: black;
+        border: 1px solid lime;
+    }
+
+    html {
+        color: lime;
+        background-color: black;
+    }
+
+    td {
+        width: 100vw;
+    }
+
+    .button {
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: Black;
+        color: Lime;
+        border: 2px solid Lime;
+    }
+
+    .button1:hover {
+        background-color: Lime;
+        color: Black;
+        border: 2px solid DarkGreen;
+    }
+
+    input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+        border-radius: 25%;
+
+        color: lime;
+        background-color: darkgreen;
+        outline-offset: 2.5px;
+        outline: 3px groove lime;
+    }
+
+    input[type="radio"]:checked {
+        background-color: lime;
+    }
+</style>
+
+<script>
+
+    document.toggle = 0;
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function myStartUp() {
+
+        myLow();
+        document.getElementById('L').checked = true;
+        document.getElementById('myArea02').value = '';
+        document.getElementById('myArea03').value = '';
+
+    }
+
+
+    document.myEncryptCounter;
+    document.myEncrypt;
+
+
+    function myNone() {
+        myEncryptCounter = 0;
+        myEncrypt = document.getElementById('myArea01').value;
+        document.getElementById('myArea02').innerHTML = myEncrypt;
+        console.log('N')
+    }
+
+    function myLow() {
+        myEncrypt = document.getElementById('myArea01').value;
+        myEncryptCounter = 0;
+        for (var i = 0; i < 1; i++) {
+            myEncrypt = btoa(myEncrypt);
+            myEncryptCounter++
+            console.log('L')
+        }
+    }
+
+    function myMedium() {
+        myEncrypt = document.getElementById('myArea01').value;
+        myEncryptCounter = 0;
+        for (var i = 0; i < 5; i++) {
+            myEncrypt = btoa(myEncrypt);
+            myEncryptCounter++
+            console.log('M')
+        }
+    }
+
+    function myHigh() {
+        myEncrypt = document.getElementById('myArea01').value;
+        myEncryptCounter = 0;
+        for (var i = 0; i < 20; i++) {
+            myEncrypt = btoa(myEncrypt);
+            myEncryptCounter++
+            console.log('H')
+        }
+    }
+
+    function myUltra() {
+
+        myEncrypt = document.getElementById('myArea01').value;
+        myEncryptCounter = 0
+        var UltraEncrypt = 50;
+
+        for (var i = 0; i < UltraEncrypt; i++) {
+            myEncrypt = btoa(myEncrypt);
+            myEncryptCounter++
+            console.log('U')
+        }
+    }
+
+    function ultraTimeAlert() {
+
+        if (confirm("This takes some time to Encrypt do you wish to continue") == true) {
+
+            myArea02Clear();
+            return
+
+        } else {
+            document.getElementById('U').checked = false;
+            document.getElementById('H').checked = true;
+            myArea02Clear();
+
+        }
+    }
+
+    function myArea02Clear() {
+        document.getElementById('myArea02').value = '';
+    }
+
+    function allEncryptFunc() {
+
+        if (document.getElementById('N').checked == true) {
+            myNone();
+        }
+
+        if (document.getElementById('L').checked == true) {
+            myLow();
+        }
+
+        if (document.getElementById('M').checked == true) {
+            myMedium();
+        }
+
+        if (document.getElementById('H').checked == true) {
+            myHigh();
+        }
+
+        if (document.getElementById('U').checked == true) {
+            myUltra();
+        }
+
+    }
+
+     async function Matrix() {
+        var setResultVar;
+        var result = [];
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789Ω!@#$%^&*()_+~`-=[]{};:"\|?/><,.';
+        var charactersLength = characters.length;
+        var i;
+        var setLength = 1;
+        var setLength1 = 5;
+
+        for (setResultVar = 0; setResultVar < setLength; setResultVar++) {
+            result[setResultVar] = '';
+
+        }
+
+
+
+
+        for (i = 0; i < setLength; i++) {
+            for (var Q = 0; Q < setLength1; Q++) {
+                result[i] += characters.charAt(Math.floor(Math.random() * charactersLength));
+                document.getElementById('myMatrixArea').value += result[i];
+                    //sleep(1000)
+            }
+        }
+        
+        if (document.getElementById('myMatrixArea').value.length > 1600) {
+            document.getElementById('myMatrixArea').value = '';
+        }
+
+
+        
+    }
+
+    document.myInterval = setInterval(Matrix, 1);
+    
+
+</script>
+
+<body onload="myStartUp()">
+  Version 1.50.32.105
+    <h1 align=center>T3A16-Spy-By-Brandon.html</h1>
+
+    <h4>Choose Leval Of Encryption</h4>
+    <table>
+        <tr align="center">
+            <td>NONE<input type="radio" id="N" value="NONE" name="r1"></td>
+            <td>LOW<input type="radio" id="L" value="LOW" name="r1" checked></td>
+            <td>MEDIUM<input type="radio" id="M" value="MEDIUM" name="r1"></td>
+            <td>HIGH<input type="radio" id="H" value="HIGH" name="r1"></td>
+            <td>ULTRA<input type="radio" id="U" value="ULTRA" name="r1"></td>
+
+        </tr>
+    </table>
+    <br><br>
+
+
+    <script>
+
+        document.getElementById("N").addEventListener("input", myArea02Clear);
+        document.getElementById("L").addEventListener("input", myArea02Clear);
+        document.getElementById("M").addEventListener("input", myArea02Clear);
+        document.getElementById("H").addEventListener("input", myArea02Clear);
+        document.getElementById("U").addEventListener("input", ultraTimeAlert);
+
+    </script>
+
+
+    <textarea id="myArea01" rows="1" cols="100vw">Hello how are you</textarea><br>
+
+
+    <input class="button button1" type=button value="encrypt" onclick="{
+
+        if (document.getElementById('myArea01').value.length == 0) {
+            document.getElementById('myArea02').value = 'Nothing To Encrypt'
+        } else {
+        allEncryptFunc();
+        document.getElementById('myArea02').value = myEncrypt;
+        document.getElementById('myArea03').value = '';
+        if ((document.getElementById('U').checked == true) && ((document.getElementById('myArea02').value != '') && (document.getElementById('myArea02').value.length > 5))){
+            window.alert(' \t <--IMPORTANT--> \t \n\nNOT WORKING AS SHOULD PLEASE WAIT FOR TEXT TO DISPLAY\n\n          Encrypt Done');
+        }
+    }
+}"><br><br>
+
+
+    <table>
+        <tr><td align="right"><input type="radio" id="GPHD" checked onclick="{
+
+            if (toggle == 0) {
+                document.getElementById('GPHD').checked = false;
+                document.getElementById('text1').innerHTML = 'Turn On Graphic Display'
+                clearInterval(myInterval);
+                toggle = 1;
+                document.getElementById('myMatrixArea').value = '';
+            } else {
+                document.getElementById('GPHD').checked = true;
+                document.getElementById('text1').innerHTML = 'Turn Off Graphic Display'
+                myInterval = setInterval(Matrix, 1);
+                toggle = 0;
+            }
+        }"></td>
+        <td id="text1">Turn Off Graphic Display</td>
+        <tr>
+        <tr>
+            <td><textarea id="myArea02" rows="21vw" cols="100vw"></textarea></td>
+            <td><textarea id="myMatrixArea" rows="21vw" cols="100vw"></textarea></td>
+        </tr>
+    </table>
+    <br>
+
+    <input class="button button1" type=button value="decrypt" onclick="{
+        var myDecrypt = document.getElementById('myArea02').value;
+
+        if ((myEncryptCounter == 0) || (document.getElementById('myArea02').value.length == 0) || (document.getElementById('myArea02').value == 'Nothing To Encrypt')){
+            document.getElementById('myArea03').value = 'Nothing To Decrypt';
+        } else {
+        for(var i = 0;i < myEncryptCounter;i++){
+            myDecrypt = atob(myDecrypt);
+            document.getElementById('myArea03').value = myDecrypt;
+        }
+    }
+}"><br><br>
+
+
+    <textarea id="myArea03" rows="1" cols="100vw"></textarea><br>
+
+    <script>
+
+        myEncrypt = document.getElementById('myArea01').value;
+
+    </script>
+
+</body>
+
+</html>
