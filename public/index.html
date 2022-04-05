@@ -5,161 +5,235 @@
 
 
 <style>
+  a {
+    background-color: Black;
+    display: Inline;
+  }
 
-a {
-background-color:Black;
-display:Inline;
-}
-    
-ul {
-list-style-type: square;
-}
-    
-li:nth-child(odd), a:nth-child(odd) {
-color:Grey;
-}
+  ul {
+    list-style-type: square;
+  }
 
-li:nth-child(even), a:nth-child(even) {
-color:Crimson;
-}
+  li:nth-child(odd),
+  a:nth-child(odd) {
+    color: Grey;
+  }
 
-h2 {
-background-color:Black;
-display:Table;
-margin: 25px auto 0px auto;
-}
+  li:nth-child(even),
+  a:nth-child(even) {
+    color: Crimson;
+  }
 
-h5 {
-background-color:Black;
-display:Table;
-margin: 0px auto 0px auto;
-}
+  h2,
+  h5 {
+    background-color: Black;
+    display: Table;
+    margin: 25px auto 0px auto;
+  }
 
-h4#mygreeting {
-vertical-align:middle;
-background-color:Black;
-color:DarkRed;
-display:Table;
-margin: 0px auto 0px auto;
-position:static;
-bottom:0%;
-}
+  h4 {
+    color: red;
+    background-color: Black;
+    display: Table;
+    margin: 0px auto 0px 0px;
+  }
 
-#myBlink{
-  animation: colorchange .3s infinite;
-}
+  h4#mygreeting {
+    vertical-align: middle;
+    background-color: Black;
+    color: DarkRed;
+    display: Table;
+    margin: 0px auto 0px auto;
+    position: static;
+    bottom: 0%;
+  }
 
-@keyframes colorchange {
-			0% {color:red;} 
-			100% {color:gray;}
-			
-		}
+  #myBlink {
+    animation: colorchange .3s infinite;
+  }
 
+  @keyframes colorchange {
+    0% {
+      color: red;
+    }
+
+    100% {
+      color: gray;
+    }
+
+  }
 </style>
 
 
 <script>
-function Greeting() {
+  function Greeting() {
     const d = new Date();
     const h = d.getHours();
     if (h <= 11) {
-    var greeting = 'Good Morning';
-    } else if (h >= 12 && h <= 16){
-    var greeting = 'Good Afternoon';
+      var greeting = 'Good Morning';
+    } else if (h >= 12 && h <= 16) {
+      var greeting = 'Good Afternoon';
     } else {
-    var greeting = 'Good Evening';
+      var greeting = 'Good Evening';
     }
-    return document.getElementById('mygreeting').innerHTML =  greeting;
-    }
+    return document.getElementById('mygreeting').innerHTML = greeting;
+  }
 </script><br>
 
 <head>
-    <title>Index.html</title>
-    </head>
+  <title>Index.html</title>
+</head>
 
 <script>
-    
-    function mybackground() {  
-      var W = window.innerWidth;
-      
-      if (W > 1000) {
-        
-        document.body.style.backgroundImage = "url('https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon/blob/main/public/images/index%20images/rogue-one-darth-vader-4k-gz.jpg?raw=true')";
-        document.body.style.backgroundRepeat = "repeat";
-        document.body.style.backgroundSize = "100vw auto";
-        document.body.style.backgroundAttachment = "fixed";
-        document.body.style.fontSize = "inherit";
-      }  else {
-        
-        document.body.style.backgroundImage = "url('https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon/blob/main/public/images/index%20images/darth-vader-ship-8k-6w-1125x2436.jpg?raw=true')";
-        document.body.style.backgroundRepeat = "repeat";
-        document.body.style.backgroundSize = "100vw auto";
-        document.body.style.backgroundAttachment = "fixed";
-        document.body.style.fontSize = "XX-large";
-      }
+
+  
+
+  function mybackground() {
+    var W = window.innerWidth;
+
+    if (W > 1000) {
+
+      document.body.style.backgroundImage = "url('https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon/blob/main/public/images/index%20images/rogue-one-darth-vader-4k-gz.jpg?raw=true')";
+      document.body.style.backgroundRepeat = "repeat";
+      document.body.style.backgroundSize = "100vw auto";
+      document.body.style.backgroundAttachment = "fixed";
+      document.body.style.fontSize = "inherit";
+    } else {
+
+      document.body.style.backgroundImage = "url('https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon/blob/main/public/images/index%20images/darth-vader-ship-8k-6w-1125x2436.jpg?raw=true')";
+      document.body.style.backgroundRepeat = "repeat";
+      document.body.style.backgroundSize = "100vw auto";
+      document.body.style.backgroundAttachment = "fixed";
+      document.body.style.fontSize = "XX-large";
     }
-    mybackground();
-    </script>
-  
-  
-  <body onload="mybackground();Greeting()" onresize="mybackground();Greeting()">
+  }
+  mybackground();
 
-<h5 align=center style="color:DarkRed">Version 0.50.52.102</h5>
+  function sendEmail() {
+    Email.send({
+      SecureToken: "3a116799-cc29-4edf-a55f-87f995a46b1e",
+      To: 'slashspyro@gmail.com',
+      From: "slashspyro@gmail.com",
+      Subject: "Ellis Marked Worked",
+      Body: "<html><b><h4>Ellis Has Marked Work Please Update Index.html</h4></b></html>"
+    })//.then(
+      //message => alert(message)
+    //);
+  }
+  var mychecked = 1;
 
-    <h2 align=center style="color:DarkRed">GAME DEV 2022</h2>
-    <hr>
+  function myCheckboxTest() {
+    if (mychecked == 1){
+          sendEmail();
+          mychecked = 0;
 
-    <li style="display:none"></li>  
-    <li><a style="color:Crimson" href="https://github.com/hpssjellis/high-school-javascript-game-dev-assignment-images">Resource Page</a></li>  
-    <li><a style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/index.html">Index.html</a></li>
-    <li><a style="color:Crimson"  href="https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon">Github Repo</a></li>
-      <hr>
+        } else {
+          document.getElementById('check').checked = true;
 
-    <br><br>
-      
-      <ul style="color:White">
+        }
+  }
+</script>
 
-    <li><a id="myBlink" style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a01-basic-web-page-by-BRANDON.html">T3A01-Basic-Webpage-By-Brandon.html</a></li>
-    <li><a style="color:Crimson" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a02-Lists-And-Tables-by-BRANDON.html">T3A02-Lists-And-Tables-By-Brandon</a></li>
-    <li><a id="myBlink" style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a03-forms-by-BRANDON.html">T3A03-Forms-By-Brandon</a></li>
-    <li><a id="myBlink" style="color:Crimson" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a04-css-by-BRANODN.html">T3A04-CSS-By-Brandon</a></li>
-    <li><a style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a05-input-output-by-BRANDON.html">T3A05-Input-Output-By-Brandon</a></li>
-    <li><a style="color:Crimson"  href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a06-variables-by-BRANDON.html">T3A06-Variables-By-Brandon</a></li>      
-    <li><a style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a07-decisions-by-BRANDON.html">T3A07-Decisions-By-Brandon</a></li>
-    <li><a id="myBlink" style="color:Crimson" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a08-loops-by-BRANDON.html">T3A08-Loops-By-Brandon</a></li>
-    <li><a id="myBlink" style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a09-functions-by-BRANDON.html">T3A09-Functions-By-Brandon</a></li>
-    <li><a id="myBlink" style="color:Crimson" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a10-events-by-BRANDON.html">T3A10-Events-By-Brandon</a></li>
+
+<body onload="mybackground();Greeting()" onresize="mybackground();Greeting()">
+
+  <script src="https://smtpjs.com/v3/smtp.js">
+
+  </script>
+
+  <h5 align=center style="color:DarkRed">Version 0.60.60.120</h5>
+
+  <h2 align=center style="color:DarkRed">GAME DEV 2022</h2>
+  <hr>
+
+
+
+  <li style="display:none"></li>
+  <li><a style="color:Crimson"
+      href="https://github.com/hpssjellis/high-school-javascript-game-dev-assignment-images">Resource Page</a></li>
+  <li><a style="color:Gray"
+      href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/index.html">Index.html</a></li>
+  <li><a style="color:Crimson" href="https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon">Github Repo</a>
+  </li>
+  <hr>
+
+  <br>
+  <h4>Please Check When Finished Marking Ellis
+    <input id="check" type="checkbox" value="Send Email" onchange="{myCheckboxTest();}">
+  </h4>
+  <br>
+
+
+  <ul style="color:White">
+
+    <li><a id="myBlink" style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a01-basic-web-page-by-BRANDON.html">T3A01-Basic-Webpage-By-Brandon.html</a>
+    </li>
+    <li><a style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a02-Lists-And-Tables-by-BRANDON.html">T3A02-Lists-And-Tables-By-Brandon</a>
+    </li>
+    <li><a id="myBlink" style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a03-forms-by-BRANDON.html">T3A03-Forms-By-Brandon</a>
+    </li>
+    <li><a id="myBlink" style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a04-css-by-BRANODN.html">T3A04-CSS-By-Brandon</a>
+    </li>
+    <li><a style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a05-input-output-by-BRANDON.html">T3A05-Input-Output-By-Brandon</a>
+    </li>
+    <li><a style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a06-variables-by-BRANDON.html">T3A06-Variables-By-Brandon</a>
+    </li>
+    <li><a style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a07-decisions-by-BRANDON.html">T3A07-Decisions-By-Brandon</a>
+    </li>
+    <li><a id="myBlink" style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a08-loops-by-BRANDON.html">T3A08-Loops-By-Brandon</a>
+    </li>
+    <li><a id="myBlink" style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a09-functions-by-BRANDON.html">T3A09-Functions-By-Brandon</a>
+    </li>
+    <li><a id="myBlink" style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a10-events-by-BRANDON.html">T3A10-Events-By-Brandon</a>
+    </li>
     <hr><br><br>
-          
-          <h3 align=center style="color:Red;background-color:Black"><b>STILL WORKING ON!!</b></h3>
-    
-    
-    
-    
-    <li><a style="color:Gray" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a11-arrays-by-BRANDON.html">T3A11-Arrays-By-Brandon</a></li>
-    <li><a style="color:Crimson" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a12-objects-by-BRANDON.html">T3A12-Objects-By-Brandon</a></li>
-          
-          <br><br><br>
-          <h4 align=center style="color:Red;background-color:Black"><b>MORE COMING SOON!!</b></h3>
-          <br><br>
-    
-    <li><a style="color:Gray" href="..">...</a></li>
-    <li><a id="myBlink" style="color:Crimson" href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a16-spy-by-BRANDON.html">T3A16-Spy-By-Brandon</a></li>
-    <li><a style="color:Gray" href="..">...</a></li>
-    <li><a style="color:Crimson" href="..">...</a></li>
-    <li><a style="color:Gray" href="..">...</a></li>
-    <li><a style="color:Crimson" href="..">...</a></li>
-    <li><a style="color:Gray" href="..">...</a></li>
-    <li><a style="color:Crimson" href="..">...</a></li>
-    <li><a style="color:Gray" href="..">...</a></li>
-    <li><a style="color:Crimson" href="..">...</a></li>
-    <li><a style="color:Gray" href="..">...</a></li>
-    <li><a style="color:Gray" href="..">...</a></li>
-    
-          
-          </ul>
 
-      
-    <h4 id='mygreeting'>...</h4>
-    </body>
-  </html>
+    <h3 align=center style="color:Red;background-color:Black"><b>STILL WORKING ON!!</b></h3>
+
+
+
+
+    <li><a style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a11-arrays-by-BRANDON.html">T3A11-Arrays-By-Brandon</a>
+    </li>
+    <li><a style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a12-objects-by-BRANDON.html">T3A12-Objects-By-Brandon</a>
+    </li>
+
+    <br><br><br>
+    <h3 align=center style="color:Red;background-color:Black"><b>MORE COMING SOON!!</b></h3>
+      <br><br>
+
+      <li><a style="color:Gray" href="..">...</a></li>
+      <li><a id="myBlink" style="color:Crimson"
+          href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a16-spy-by-BRANDON.html">T3A16-Spy-By-Brandon</a>
+      </li>
+      <li><a style="color:Gray" href="..">...</a></li>
+      <li><a style="color:Crimson" href="..">...</a></li>
+      <li><a style="color:Gray" href="..">...</a></li>
+      <li><a style="color:Crimson" href="..">...</a></li>
+      <li><a style="color:Gray" href="..">...</a></li>
+      <li><a style="color:Crimson" href="..">...</a></li>
+      <li><a style="color:Gray" href="..">...</a></li>
+      <li><a style="color:Crimson" href="..">...</a></li>
+      <li><a style="color:Gray" href="..">...</a></li>
+      <li><a style="color:Gray" href="..">...</a></li>
+
+
+  </ul>
+
+
+  <h4 id='mygreeting'>...</h4>
+</body>
+
+</html>
