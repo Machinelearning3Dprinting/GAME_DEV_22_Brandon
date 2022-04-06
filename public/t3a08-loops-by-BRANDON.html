@@ -2,58 +2,61 @@
 
 <html style="font-size: large;color: white;background-color: black;">
 
-<head><title>Loops</title></head>
+<head>
+  <title>Loops</title>
+</head>
 
 <script>
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-//localStorage.setItem("torture", closingCode());
-
-
-//window.onbeforeunload = localStorage.getItem("torture"); //closingCode;
-async function closingCode(){
-  await sleep(60000);
-
-  for(var x=0;x<5;x++) {
-
-    window.open('https://abhayjeet1357.github.io/Game_Dev_22_Abhay/public/index.html');
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
-   return null;
-}
+
+  //localStorage.setItem("torture", closingCode());
+
+
+  //window.onbeforeunload = localStorage.getItem("torture"); //closingCode;
+  /*async function closingCode() {
+    await sleep(60000);
+
+    for (var x = 0; x < 5; x++) {
+
+      window.open('https://abhayjeet1357.github.io/Game_Dev_22_Abhay/public/index.html');
+    }
+    return null;
+  }*/
 
 </script>
 
 
 <body>
 
-Version 1.10.50.60
+  Version 1.15.50.65
 
-<h2 align=center>T3A08-Loops-By-Brandon</h2>
+  <h2 align=center>T3A08-Loops-By-Brandon</h2>
 
-<a href="https://www.w3schools.com/js/js_loop_while.asp">Good reference to Javascript Loops</a><br>
+  <a href="https://www.w3schools.com/js/js_loop_while.asp">Good reference to Javascript Loops</a><br>
 
 
-<h4> Example input output code</h4>
-<pre>
+  <h4> Example input output code</h4>
+  <pre>
 
 </pre>
 
-<h4> Example working code</h4>
+  <h4> Example working code</h4>
 
-Max loops: <input id="myNum01" type=number value="4" ><br> 
+  Max loops: <input id="myNum01" type=number value="5"><br>
 
-<input type=button value="Basic For loop with Decisions" onclick="{
+  <input type=button value="Basic For loop with Decisions" onclick="{
     document.getElementById('myDiv01').innerHTML = ''
+    document.getElementById('myDiv03').innerHTML = ''
     let myTemp = ''
 
     let myMax = parseInt(document.getElementById('myNum01').value)
 
     for (let myLoop = 0; myLoop < myMax; myLoop++ ){
 
-       if (myLoop * 2 > myMax){
+       if (myLoop > (myMax-2)){
           myTemp += ' cool '
       }
 
@@ -63,7 +66,8 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 }">
 
 
-<input type=button value="Basic For loop only" onclick="{
+  <input type=button value="Basic For loop only" onclick="{
+    document.getElementById('myDiv03').innerHTML = ''
     let myTemp = ''
     let myMax = parseInt(document.getElementById('myNum01').value)
     for (let myLoop = 0; myLoop < myMax; myLoop++ ){
@@ -74,27 +78,36 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 
 
 
-<input type=button value="Even number identifier" onclick="{
+  <input type=button value="Even number identifier" onclick="{
     document.getElementById('myDiv01').innerHTML = ''
+    document.getElementById('myDiv03').innerHTML = ''
     let myTemp = ''
+    let myEvenNumber = 0;
+    let myEvenNumberStr = '';
 
     let myMax = parseInt(document.getElementById('myNum01').value)
 
     for (let myLoop = 0; myLoop < myMax; myLoop++ ){
 
        if (myLoop % 2 == 0){
-          myTemp += 'Even Number, '
+          myTemp += '<font style=\'color:lime;\'> Even </font>'
+          myEvenNumber++;
       }
 
       myTemp += 'Loop number: ' + myLoop + '<br>'
+      myEvenNumberStr = '<font style=\'color:lime;\'> Even </font>' + 'Total Even numbers: ' + myEvenNumber;
     }
     document.getElementById('myDiv01').innerHTML = myTemp 
+    document.getElementById('myDiv03').innerHTML = myEvenNumberStr 
 }">
 
 
-<input type=button value="Odd number identifier" onclick="{
+  <input type=button value="Odd number identifier" onclick="{
     document.getElementById('myDiv01').innerHTML = ''
+    document.getElementById('myDiv03').innerHTML = ''
     let myTemp = ''
+    let myOddNumber = 0;
+    let myOddNumberStr = '';
 
     let myMax = parseInt(document.getElementById('myNum01').value)
 
@@ -102,16 +115,31 @@ Max loops: <input id="myNum01" type=number value="4" ><br>
 
        if (myLoop % 2 == 1){
           myTemp += '<font style=\'color:red;\'> Odd </font>'
+          myOddNumber++;
       }
 
-      myTemp += 'Loop number: ' + myLoop + '<br>'
+      myTemp += 'Loop number: ' + myLoop + '<br>';
+      myOddNumberStr = '<font style=\'color:red;\'> Odd </font>' + 'Total Odd numbers: ' + myOddNumber;
     }
-    document.getElementById('myDiv01').innerHTML = myTemp 
-}">
+    document.getElementById('myDiv01').innerHTML = myTemp
+    document.getElementById('myDiv03').innerHTML = myOddNumberStr 
+}"><br>
+  <table style="top: 0%;">
+    <tr style="top: 0%;">
+      <td>
+        <div id="myDiv01">
+          <font color=red>...</font>
+        </div>
+      </td>
+      <td style="position: relative; top: 0%;">
+        <div style="top: 0%;" id="myDiv03">...</div>
+      </td>
+    </tr>
+  </table>
 
-<div id="myDiv01"><font color=red>...</font></div>
+  <br>
 
-<input type="button" value="while loop" onclick="{
+  <input type="button" value="while loop" onclick="{
 var i = 0;
 var text = ''
 var Z = document.getElementById('myNum01').value;
@@ -139,7 +167,7 @@ myWhileLoop(document.getElementById('myNum01').value);
 
 }">
 
-<input type='button' value='abc' onclick="{
+  <input type='button' value='abc' onclick="{
   async function myABCS() {  
     var ABC = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','P','Q','R','S','T','U','V','W','X','Y','Z','A For Loop Used To Iterate Through An Array']
     var i = 0;
@@ -158,7 +186,7 @@ myWhileLoop(document.getElementById('myNum01').value);
   myABCS();
 }">
 
-<div id="myDiv02">...</div>
+  <div id="myDiv02">...</div>
 
 
 </body>
