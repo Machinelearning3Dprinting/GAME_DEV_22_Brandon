@@ -25,7 +25,9 @@
   }
 
   h2,
-  h5 {
+  h5,
+  h1,
+  h3 {
     background-color: Black;
     display: Table;
     margin: 25px auto 0px auto;
@@ -86,7 +88,7 @@
 
 <script>
 
-  
+
 
   function mybackground() {
     var W = window.innerWidth;
@@ -116,34 +118,36 @@
       From: "slashspyro@gmail.com",
       Subject: "Ellis Marked Worked",
       Body: "<html><b><h4>Ellis Has Marked Work Please Update Index.html</h4></b></html>"
-    })//.then(
-      //message => alert(message)
-    //);
+    })
   }
   var mychecked = 1;
 
   function myCheckboxTest() {
-    if (mychecked == 1){
-          sendEmail();
-          mychecked = 0;
+    if (mychecked == 1) {
+      sendEmail();
+      mychecked = 0;
 
-        } else {
-          document.getElementById('check').checked = true;
+    } else {
+      document.getElementById('check').checked = true;
 
-        }
+    }
   }
 </script>
 
 
 <body onload="mybackground();Greeting()" onresize="mybackground();Greeting()">
 
+
+
   <script src="https://smtpjs.com/v3/smtp.js">
 
   </script>
 
-  <h5 align=center style="color:DarkRed">Version 0.60.60.120</h5>
+  <h2 style="color:DarkRed;" id='mygreeting'>...</h2>
 
-  <h2 align=center style="color:DarkRed">GAME DEV 2022</h2>
+  <h3 align=center style="color:DarkRed">Version 0.60.60.120</h3>
+
+  <h1 align=center style="color:DarkRed">GAME DEV 2022</h1>
   <hr>
 
 
@@ -198,42 +202,64 @@
     </li>
     <hr><br><br>
 
-    <h3 align=center style="color:Red;background-color:Black"><b>STILL WORKING ON!!</b></h3>
+    <h3 align=center style="display:block;color:Red;background-color:Black"><b>STILL WORKING ON!!</b></h3>
 
 
 
 
-    <li><a style="color:Gray"
+    <li><a id="myBlink" style="color:Gray"
         href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a11-arrays-by-BRANDON.html">T3A11-Arrays-By-Brandon</a>
     </li>
     <li><a style="color:Crimson"
         href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a12-objects-by-BRANDON.html">T3A12-Objects-By-Brandon</a>
     </li>
+    <li><a style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a13-classes-by-BRANDON.html">T3A13-Classes-By-Brandon</a>
+    </li>
+    <li><a style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a14-extend-class-by-BRANODN.html">T3A14-Extend-Class-By-Brandon</a>
+    </li>
+    <li style="display: none;"><a></a></li>
+    <li><a id="myBlink" style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a16-spy-by-BRANDON.html">T3A16-Spy-By-Brandon</a>
+    </li>
+    <li><a id="myBlink" style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a17-move-background-by-BRANODN.html">T3A17-Move-Background-By-Brandon</a>
+    </li>
+    <li><a style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a18-canvas-by-BRANDON.html">T3A18-Canvas-By-Brandon</a>
+    </li>
+    <li><a style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a19-local-storage-by-BRANDON.html">T3A19-Local-Storage-By-Brandon</a>
+    </li>
+    <li><a style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a20-sound-by-BRANDON.html">T3A20-Sound-By-Brandon</a>
+    </li>
+    <li><a style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a21-translate-by-BRANODN.html">T3A21-Translate-By-Brandon</a>
+    </li>
+    <li><a style="color:Crimson"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a22-GAME-TEMPLATE-by-BRANDON.html">T3A22-Game-Template-By-Brandon</a>
+    </li>
+    <li><a style="color:Gray"
+        href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a23-sort-by-BRANDON.html">T3A23-Sort-By-Brandon</a>
+    </li>
 
-    <br><br><br>
-    <h3 align=center style="color:Red;background-color:Black"><b>MORE COMING SOON!!</b></h3>
-      <br><br>
+    <!--<br><br><br>
+    <h3 align=center style="display:block;color:Red;background-color:Black"><b>MORE COMING SOON!!</b></h3>
+    <br><br>-->
 
-      <li><a style="color:Gray" href="..">...</a></li>
-      <li><a id="myBlink" style="color:Crimson"
-          href="https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/t3a16-spy-by-BRANDON.html">T3A16-Spy-By-Brandon</a>
-      </li>
-      <li><a style="color:Gray" href="..">...</a></li>
-      <li><a style="color:Crimson" href="..">...</a></li>
-      <li><a style="color:Gray" href="..">...</a></li>
-      <li><a style="color:Crimson" href="..">...</a></li>
-      <li><a style="color:Gray" href="..">...</a></li>
-      <li><a style="color:Crimson" href="..">...</a></li>
-      <li><a style="color:Gray" href="..">...</a></li>
-      <li><a style="color:Crimson" href="..">...</a></li>
-      <li><a style="color:Gray" href="..">...</a></li>
-      <li><a style="color:Gray" href="..">...</a></li>
+
+
+
+
+
 
 
   </ul>
 
 
-  <h4 id='mygreeting'>...</h4>
+
 </body>
 
 </html>
