@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 
-<html>
-  <head>
+<html style="color: white; background-color: black;">
+
+<head>
   <title>Objects</title>
-    <head>
-  
+
+</head>
+
   <body>
-Version 0.0.3
+    Version 0.0.3
 
-<h2 align=center>T3A12-Objects-by-Brandon</h2>
-<a href="https://www.w3schools.com/js/js_ex_dom.asp">Good reference to Javascript Objects</a><br>
+    <h2 align=center>T3A12-Objects-by-Brandon</h2>
+    <a href="https://www.w3schools.com/js/js_ex_dom.asp">Good reference to Javascript Objects</a><br>
 
-Objects are stored named variables
+    Objects are stored named variables
 
-<h4> Example Objects code</h4>
-<pre class="mycode">
+    <h4> Example Objects code</h4>
+    <pre class="mycode">
 let myPerson = {
 "firstName":"John",
 "lastName":"Doe",
@@ -25,25 +27,49 @@ let myPerson = {
 
 <h4> Example working Objects Code</h4>
 
-Nothing: <input type=text id="myText01" value= "Useless at the moment"><br>
+Nothing: <input type=text id="myText07" value= "Useless at the moment"><br>
 
 <input type=button value="Example Object Set and Show" onClick="{
                                                                 
-                                                                let myPerson = {
-                                                                'firstName' : 'John',
-                                                                'lastName' : 'Doe',
-                                                                'age' : 50,
-                                                                'eyeColor' : 'blue'
-                                                                }
- document.getElementbyId('myDiv01').innerHTML = '<br>myPerson Object has properties: <Br>'
-    document.getElementbyId('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
-    document.getElementbyId('myDiv01').innerHTML += 'You do the others <br> '
+  let myPerson = {
+    'firstName' : 'John',
+    'lastName' : 'Doe',
+    'age' : 50,
+    'eyeColor' : 'blue'
+  }
+ document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <Br>'
+    document.getElementById('myDiv01').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
+    document.getElementById('myDiv01').innerHTML += 'You do the others <br> '
                                                                 }">
-<div id="myDiv01">...</div<
+<div id="myDiv01">...</div>
   
   <br>
-  
+
+    <h4>My Objects Code</h4>
+
+    Enter First Name: <input type=text id="myText01" value="John"><br>
+    Enter Last Name: <input type=text id="myText02" value="Doe"><br>
+    Enter Age: <input type=number id="myText03" value="50" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"><br>
+    Enter Eye Color: <input type=text id="myText04" value="Blue"><br>
+
+    <input type=button value="Object Set and Show" onClick="{
+                                                                
+      let myPerson = {
+          'firstName' : document.getElementById('myText01').value,
+          'lastName' : document.getElementById('myText02').value,
+          'age' : document.getElementById('myText03').value,
+          'eyeColor' : document.getElementById('myText04').value
+      }
+      document.getElementById('myDiv02').innerHTML = '<br>myPerson Object has properties: <br>'
+      document.getElementById('myDiv02').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
+      document.getElementById('myDiv02').innerHTML += 'lastName: ' + myPerson.lastName + '<br>'
+      document.getElementById('myDiv02').innerHTML += 'age: ' + myPerson.age + '<br>'
+      document.getElementById('myDiv02').innerHTML += 'eye Color: ' + myPerson.eyeColor + '<br>'
+
+      //document.getElementById('myDiv01').innerHTML += 'You do the others <br> '
+    }">
+    <div id="myDiv02">...</div> <br>
+
   </body>
-  
-  </html>
-                                                               
+
+</html>
