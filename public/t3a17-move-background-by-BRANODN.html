@@ -1,29 +1,132 @@
+<!DOCTYPE html>
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
+<html>
+
+<head>
+  <title>
+    Move Background
+  </title>
+  <link rel="icon" href="" type="Image/gif">
+</head>
+
+
+
+
+
+<body id="myBody" style="background-repeat:repeat; background-size: 100%"
+  background="https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon/blob/main/public/images/index%20images/rogue-one-darth-vader-4k-gz.jpg?raw=true">
+
+  <script>
+
+
+    //document.mySpeedControl = 1;
+  
+    let leftOrRight = 0;
+  
+    myGlobalXContoller = 1;
+  
+    let myClock;
+
+    var myGlobalX = 0;
+
+    myTemp = '100px 0px'
+  
+    
+  
+    function myBackgroundMpve() {
+
+  
+      
+      if (leftOrRight == 0) {
+  
+      myGlobalX -= parseInt(myGlobalXContoller);
+  
+      }
+  
+      if (leftOrRight == 1) {
+  
+        myGlobalX += parseInt(myGlobalXContoller);
+  
+      }
+      myTemp = myGlobalX + 'px 0px'
+      document.getElementById('myBody').style.backgroundPosition = myTemp
+  
+      console.log("1")
+  
+    }
+  
+  </script>
 
 <script>
-   let myGlobalX = 0
-   let myClock
-</script>
+console.log(document.getElementById('myBody').style.backgroundPosition)
+  </script>
 
-<input id="myButton01" type=button value="background move left" onclick="{
+
+  <h2 style="color: white;font-size:xxx-large;text-decoration:underline;font-weight:heavy" align="center">
+    T3A17-Move-Background-by-Brandon.html </h2>
+
+
+
+  <input id="myButton01" type=button value="background move left" onclick="{
   myTemp = '100px 0px'
-  myGlobalX -= 5
+  myGlobalX -= 10
   myTemp =  myGlobalX + 'px 0px'
-  document.getElementById('myBody').style.backgroundPosition =myTemp
-
+  document.getElementById('myBody').style.backgroundPosition = myTemp
 }">
 
-<input type=button value="Auto Background Left" onclick="{
-  clearInterval(myClock)
-  myClock = setInterval(function(){
-     document.getElementById('myButton01').click() 
-  }, 100)
+  <input type=button class="button" value="Auto Background Left" onclick="{
+    myGlobalX = 0;
+    leftOrRight = 0;
+    clearInterval(myClock)
+    myClock = setInterval(myBackgroundMpve, 1)
+
     
 }">
 
-<input type=button value="Image Right" onclick="{
+  <input type="button" value="+ speed" onclick="{
+   myGlobalXContoller += 1; 
+  
+  }">
+  <input type="button" value="- speed" onclick="{
+
+  myGlobalXContoller -= 1;
+
+  if (myGlobalXContoller == 0) {
+
+    myGlobalXContoller = 1
+  }
+
+  
+  }">
+
+  <input type=button class="button" value="Stop Auto Background Move" onclick="{
+  clearInterval(myClock)
+
+  
+  }">
+
+  <input type=button class="button" value="Reset" onclick="{
+
+  document.getElementById('myBody').style.backgroundPosition = '0px 0px';
+
+
+  
+}">
+
+<input type=button class="button" value="Auto Background Right" onclick="{
+  myGlobalX = 0;
+  leftOrRight = 1;
+  clearInterval(myClock)
+  myClock = setInterval(myBackgroundMpve, 1)
+
+  
+}">
+
+  <input type=button class="button" value="Image Right" onclick="{
   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
 }"><br><br>
 
-<img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="myImage01.jpg">
+  <img id="myImage01" style="position:relative; width:auto; height:12.5%; top:0px; left:0px;" src="./DV_CUT_OUT.jpg">
+
+  </body>
+  </html>
