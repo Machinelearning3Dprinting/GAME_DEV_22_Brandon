@@ -1,13 +1,46 @@
+<!DOCTYPE html>
+<html style="color: white; background-color: black;">
 
-Version 0.0.1
-<h2 align=center>t2a03-Classes-by-Fred.html</h2>
+<head>
+   <title>Classes</title>
+</head>
 
-<a href="">Find a good reference to Javascript Classes</a><br>
-Classes are both Objects that store variables (Called Properties) and Functions
-that work on the variables (called Methods)
+<body>
 
-<h4> Example Classses code</h4>
-<pre>
+   <!--<script>
+      class myName {
+
+         constructor(firstName, lastName) {
+
+            this.myFirstName = firstName;
+            this.myLastName = lastName;
+         }
+
+         myNameIs() {
+
+            document.getElementById('myDiv02').innerHTML = 'Hello ' + this.myFirstName + ' ' + this.myLastName + ' how are you';
+
+         }
+
+      }
+
+      myNewName = new myName(document.getElementById('myTxt01').value, document.getElementById('myTxt02').value)
+   myNewName.myShow()  
+   </script>-->
+
+
+
+
+
+   Version 0.5.10.15
+   <h2 align=center>t2a03-Classes-by-Fred.html</h2>
+
+   <a href="">Find a good reference to Javascript Classes</a><br>
+   Classes are both Objects that store variables (Called Properties) and Functions
+   that work on the variables (called Methods)
+
+   <h4> Example Classses code</h4>
+   <pre>
  class myAnimal {
     constructor(passName, passAge) {
        this.myName = passName;
@@ -21,9 +54,9 @@ that work on the variables (called Methods)
 
 </pre>
 
-<h4> Example working Classes code</h4>
-Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
-<input type=button value="Example Class Set and Show Class Animal" onClick="{
+   <h4> Example working Classes code</h4>
+   Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+   <input type=button value="Example Class Set and Show Class Animal" onClick="{
  class myAnimal {
     constructor(passName, passAge) {
        this.myName = passName;
@@ -38,9 +71,51 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 
 }">
 
-<div id="myDiv01">...</div>
+   <div id="myDiv01">...</div><br><br><hr>
+
+   First Name:<input type="text" id="myTxt01" value="Fred" placeholder="First Name"><br>
+   Last Name:<input type="text" id="myTxt02" value="Ethel" placeholder="Last Name"><br>
+   <br>
+
+   <input type="button" value="Click to run method" onclick="showMyName()">
+   <br><br>
+   <div id="myDiv02">...</div>
+
+  
+
+
+   <script>
+      class myName {
+
+         constructor(firstName, lastName) {
+
+            this.myFirstName = firstName;
+            this.myLastName = lastName;
+         }
+
+         myNameIs() {
+
+            document.getElementById('myDiv02').innerHTML = 'Hello ' + this.myFirstName + ' ' + this.myLastName + ' how are you';
+
+         }
+
+      }
+
+
+            function showMyName() {
+
+            myNewName = new myName(document.getElementById('myTxt01').value, document.getElementById('myTxt02').value)
+            myNewName.myNameIs()
+      
+   
+
+   }
+   </script>
 
 
 
 
 
+</body>
+
+</html>
