@@ -1,25 +1,34 @@
+<!DOCTYPE html>
+<html style="color: white; background-color: black;">
 
-<script>
+<head>
+   <title>Extended Classes</title>
+</head>
 
- class myAnimal {
-    constructor(passName, passAge) {
-       this.myName = passName;
-       this.myAge = passAge;
-    }
-    myShow(){    
-       document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName+'<br>'
-    }
- }  // end class myAnimal
+<body>
 
-</script>
 
-Version 0.0.1
-<h2 align=center>t2a04-extend-class-by-fred.html</h2>
+   <script>
 
-Extending a pre-existing Class<br>
+      class myAnimal {
+         constructor(passName, passAge) {
+            this.myName = passName;
+            this.myAge = passAge;
+         }
+         myShow() {
+            document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '<br>'
+         }
+      }  // end class myAnimal
 
-<h4> Example Class extend code</h4>
-<pre>
+   </script>
+
+   Version 0.5.15.20
+   <h2 align=center>t2a04-extend-class-by-fred.html</h2>
+
+   Extending a pre-existing Class<br>
+
+   <h4> Example Class extend code</h4>
+   <pre>
 
  class myCat extends myAnimal {                                                                      
      myShow(){
@@ -30,19 +39,19 @@ Extending a pre-existing Class<br>
 </pre>
 
 
-<h4> Example working Classes code</h4>
+   <h4> Example working Classes code</h4>
 
-<input type=button value="Example Class Set and Show Class Animal" onClick="{
+   <input type=button value="Example Class Set and Show Class Animal" onClick="{
 
   myDog = new myAnimal('Snickers', 5)
   myDog.myShow()  
 
 }">
 
-<h4> Example extending Class code</h4>
-Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+   <h4> Example extending Class code</h4>
+   Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 
-<input type=button value="Example Extend Class Animal" onClick="{
+   <input type=button value="Example Extend Class Animal" onClick="{
 
  class myCat extends myAnimal {                                                                      
      myShow(){
@@ -55,9 +64,78 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 
 }">
 
-<div id="myDiv01">...</div>
+   <div id="myDiv01">...</div>
+   <hr><br>
+
+   My Code<br><br>
+
+   First Name:<input type="text" id="myTxt01" value="Fred" placeholder="First Name"><br>
+   Last Name:<input type="text" id="myTxt02" value="Ethel" placeholder="Last Name"><br>
+   Age:<input type="number" id="myTxt03" value="12" placeholder="Age"><br>
+   Eye Color:<input type="text" id="myTxt04" value="Blue" placeholder="Eye Color"><br>
+   <input type="button" value="Click to run method" onclick="showMyName()"><br>
+
+   <input type="button" value="Click to run extended method" onclick="new myNameAgeEye(document.getElementById('myTxt01').value, document.getElementById('myTxt02').value).showMyName(document.getElementById('myTxt03').value, document.getElementById('myTxt04').value)//showMyName()">
+
+   <div id="myDiv02">...</div>
 
 
 
 
+   <script>
+      class myName1 {
 
+         constructor(firstName, lastName)/*, Age, Eyecolor)*/ {
+
+            this.myFirstName = firstName;
+            this.myLastName = lastName;
+            /*this.myAge2 = Age;
+            this.myEyecolor = Eyecolor;*/
+         }
+
+         myNameIs() {
+
+            document.getElementById('myDiv02').innerHTML = 'Hello ' + this.myFirstName + ' ' + this.myLastName + ' how are you';
+
+         }
+
+      }
+
+
+      function showMyName() {
+
+         myNewName = new myName1(document.getElementById('myTxt01').value, document.getElementById('myTxt02').value)
+         myNewName.myNameIs()
+
+
+
+      }
+
+
+      class myNameAgeEye extends myName1 {
+
+         /*constructor(Age, Eyecolor) {
+
+            this.myAge2 = Age;
+            this.myEyecolor = Eyecolor;
+
+         }*/
+
+         showMyName(myAge2, myEyecolor) {
+
+            document.getElementById('myDiv02').innerHTML = 'Hello ' + this.myFirstName + ' ' + this.myLastName + ' how are you<br>' + 'see that you are ' + myAge2 + ' years old and <br>that your eye color is ' + myEyecolor;
+
+         }
+
+      }
+
+   </script>
+
+
+   
+
+
+
+</body>
+
+</html>
