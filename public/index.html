@@ -111,35 +111,11 @@
   }
   mybackground();
 
-  function sendEmail() {
-    Email.send({
-      SecureToken: "3a116799-cc29-4edf-a55f-87f995a46b1e",
-      To: 'slashspyro@gmail.com',
-      From: "slashspyro@gmail.com",
-      Subject: "Ellis Marked Worked",
-      Body: "<html><b><h4>Ellis Has Marked Work Please Update Index.html</h4></b></html>"
-    })
-  }
-  var mychecked = 1;
-
-  function myCheckboxTest() {
-    if (mychecked == 1) {
-      sendEmail();
-      mychecked = 0;
-
-    } else {
-      document.getElementById('check').checked = true;
-
-    }
-  }
 </script>
 
 
 <body onload="mybackground();Greeting()" onresize="mybackground();Greeting()">
 
-
-
-  <script src="https://smtpjs.com/v3/smtp.js">
 
   </script>
 
@@ -163,9 +139,9 @@
 
   <br>
   <h4>Please Mark All Flashing Links</h4>
-  <h4>Please Check When Finished Marking Ellis
+  /*<h4>Please Check When Finished Marking Ellis
     <input id="check" type="checkbox" value="Send Email" onchange="{myCheckboxTest();}">
-  </h4>
+  </h4>*/
   <br>
 
 
