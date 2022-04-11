@@ -1,5 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Canvas</title>
+</head>
+<body>
+   
 
-<h2 align=center>t2a08-canvas by Fred</h2>
+
+
+<h2 align=center>T3A18-Canvas-By-Brandon</h2>
 You use loops and variables to make fast fancy drawings <br><br>
 
 <input type=button value=".lineTo(30,200)" onclick="{
@@ -34,7 +43,6 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.moveTo(300,100);
    myContext.quadraticCurveTo(100,220,240,110);
    myContext.stroke();
-
 }">
 
 
@@ -56,6 +64,75 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.clearRect(20, 20, 50, 50);
 }">
 
+<input type=button value="Flower thingy" onclick="{
+   myContext.strokeStyle = 'red';
+   myContext.lineWidth = 25;
+   myContext.beginPath();
+   myContext.moveTo(100,100);
+   myContext.quadraticCurveTo(25+100,10+100,150,100);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.moveTo(150,100);
+   myContext.quadraticCurveTo(10+150,75,150,50);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.moveTo(100,50);
+   myContext.quadraticCurveTo(25+100,-10+50,150,50);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.moveTo(100,100);
+   myContext.quadraticCurveTo(-10+100,75,100,50);
+   myContext.stroke();
+
+   
+
+
+
+
+   myContext.strokeStyle = 'orange';
+   myContext.lineWidth = 20;
+
+   myContext.beginPath();
+   myContext.moveTo(125,105);
+   myContext.quadraticCurveTo(25+125,100,155,75);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.moveTo(155,75);
+   myContext.quadraticCurveTo(-10+155,50,125,45);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.moveTo(125,105);
+   myContext.quadraticCurveTo(-25+125,100,95,75);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.moveTo(125,45);
+   myContext.quadraticCurveTo(-25+125,50,95,75);
+   myContext.stroke();
+
+
+
+   myContext.beginPath();
+   myContext.arc(125,75, 10, 0, 360);
+   myContext.strokeStyle = 'black';
+   myContext.fill()
+   myContext.stroke();
+
+
+   myContext.beginPath();
+   myContext.arc(125,75, 1, 0, 360);
+   myContext.strokeStyle = 'gray';
+   myContext.fill()
+   myContext.stroke();
+   
+
+}">
+
 <input type=button value="Clear all" onclick="{
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
@@ -68,3 +145,7 @@ You use loops and variables to make fast fancy drawings <br><br>
    let myContext=myCanvas.getContext('2d');
 </script>
 
+
+
+</body>
+</html>
