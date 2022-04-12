@@ -1,29 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Storage</title>
+</head>
 
-<h2>t2a09-local-storage-name by Fred. Instructions:</h2>
+    
+<h2>T3A19-Local-Storage-By-Brandon</h2>
 
-<body onload="{
+<script>
+
+function myStorageFN() {
    myStorage = localStorage.getItem('myStoredText')
+   myStorage1 = localStorage.getItem('myStoredText1')
+   myStorage2 = localStorage.getItem('myStoredText2')
+   myStorage3 = localStorage.getItem('myStoredText3')
    if(myStorage  != null){
-      document.getElementById('myText1').value = myStorage 
+      document.getElementById('myDiv01').innerHTML = 'Age ' + myStorage 
     }
-}">
+    if(myStorage1  != null){
+      document.getElementById('myDiv02').innerHTML = 'Name ' + myStorage1 
+    }
+    if(myStorage2  != null){
+      document.getElementById('myDiv03').innerHTML = 'Eye color ' + myStorage2
+    }
+    if(myStorage3  != null){
+      document.getElementById('myDiv04').innerHTML = 'Birthday ' + myStorage3
+    }
+}
 
-<body onunload="{
-   localstorage.setItem('myStoredText',document.getElementById('myText1').value)
+</script>
+
+<body onload="{myStorageFN();
+   //localstorage.setItem('myStoredText',document.getElementById('myText1').value)
 }">   
 
-Text example: <input id="myText1" type=text size=70 value="" placeholder="Write here to store"><br>
+Age: <input id="myText1" type=text size=70 value="" placeholder="Age"><br>
+Name: <input id="myText2" type=text size=70 value="" placeholder="Name"><br>
+Eye color: <input id="myText3" type=text size=70 value="" placeholder="Eye color"><br>
+Birthday: <input id="myText4" type=text size=70 value="" placeholder="Birthday"><br>
 
 <input type="button" value="Store Text" onClick="{
    localStorage.setItem('myStoredText', document.getElementById('myText1').value)
-   alert(document.getElementById('myText1').value + ' \nHas been stored')
    document.getElementById('myText1').value = ''
+
+   localStorage.setItem('myStoredText1', document.getElementById('myText2').value)
+   document.getElementById('myText2').value = ''
+
+   localStorage.setItem('myStoredText2', document.getElementById('myText3').value)
+   document.getElementById('myText3').value = ''
+
+   localStorage.setItem('myStoredText3', document.getElementById('myText4').value)
+   document.getElementById('myText4').value = ''
 }">
 
 <input type="button" value="Retrieve Text" onClick="{
-   document.getElementById('myText1').value = localStorage.getItem('myStoredText')
+   //document.getElementById('myText1').value = localStorage.getItem('myStoredText')
+   document.getElementById('myDiv01').innerHTML = 'Age ' + localStorage.getItem('myStoredText') // myStorage 
+   document.getElementById('myDiv02').innerHTML = 'Name ' + localStorage.getItem('myStoredText1')
+   document.getElementById('myDiv03').innerHTML = 'Eye color ' + localStorage.getItem('myStoredText2')
+   document.getElementById('myDiv04').innerHTML = 'Birthday ' + localStorage.getItem('myStoredText3')
+   console.log('w')
 }"> 
 
+<div id="myDiv01">...</div>
+<div id="myDiv02">...</div>
+<div id="myDiv03">...</div>
+<div id="myDiv04">...</div>
 
-
-
+    
+</body>
+</html>
