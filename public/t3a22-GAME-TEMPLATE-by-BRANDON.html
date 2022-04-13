@@ -1,57 +1,71 @@
-<h6> Version 0.0.1 </h6>
+<!DOCTYPE html>
+<html>
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
-
-<h1 align=center>t2a11 Game Template by Fred</h1>
-<br><br><br><br>
-
-<script>
-
-   // global variables here
-   let myGlobalX = 0
-   let myClock
-
-
-   // global functions here
-function myHitOther(my1,my2){
-   left1   = parseInt(document.getElementById(my1).style.left)
-   right1  = left1 + parseInt(document.getElementById(my1).style.width)
-   top1    = parseInt(document.getElementById(my1).style.top)   
-   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
-   left2   = parseInt(document.getElementById(my2).style.left)
-   right2  = left2 + parseInt(document.getElementById(my2).style.width)
-   top2    = parseInt(document.getElementById(my2).style.top)   
-   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
-   if ((right1  >=  left2  ) &&      	   
-       (bottom1 >=  top2   ) &&
-       (left1   <=  right2 ) &&
-       (top1    <=  bottom2) ){
-       return true
-   }
-}
-
-
-function myCheckHit(){
-   if ( myHitOther('myImg01','myImg02') ){
-       alert('you lose')  
-       document.getElementById('myImg01').style.left = '20px'
-       location = 't2a13-keydown.html'  // go to your next level
-   }
-
-
-   // more if statements here like the above
+<head>
+  <title>Game Template</title>
+</head>
 
 
 
-}  // end of myCheckHit()
 
 
-</script>
 
-<img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="myImage01.jpg">
-<img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:250px;" src="myImage02.jpg">
 
-<input type=button value="Auto Background Left" onclick="{
+<h6 style="color: white;"> Version 0.0.1 </h6>
+
+<body id="myBody" style="background-repeat:repeat; background-size: 100%"
+  background="https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon/blob/main/public/images/index%20images/rogue-one-darth-vader-4k-gz.jpg?raw=true">
+
+  <h1 style="color: white;" align=center>T3A22-Game-Template-by-Brandon</h1>
+  <br><br><br><br>
+
+  <script>
+
+    // global variables here
+    let myGlobalX = 0
+    let myClock
+
+
+    // global functions here
+    function myHitOther(my1, my2) {
+      left1 = parseInt(document.getElementById(my1).style.left)
+      right1 = left1 + parseInt(document.getElementById(my1).style.width)
+      top1 = parseInt(document.getElementById(my1).style.top)
+      bottom1 = top1 + parseInt(document.getElementById(my1).style.height)
+      left2 = parseInt(document.getElementById(my2).style.left)
+      right2 = left2 + parseInt(document.getElementById(my2).style.width)
+      top2 = parseInt(document.getElementById(my2).style.top)
+      bottom2 = top2 + parseInt(document.getElementById(my2).style.height)
+      if ((right1 >= left2) &&
+        (bottom1 >= top2) &&
+        (left1 <= right2) &&
+        (top1 <= bottom2)) {
+        return true
+      }
+    }
+
+
+    function myCheckHit() {
+      if (myHitOther('myImg01', 'myImg02')) {
+        alert('you lose')
+        document.getElementById('myImg01').style.left = '20px'
+        location = 'https://machinelearning3dprinting.github.io/GAME_DEV_22_Brandon/public/index.html'  // go to your next level
+      }
+
+
+      // more if statements here like the above
+
+
+
+    }  // end of myCheckHit()
+
+
+  </script>
+
+  <img id="myImg01" style="position:absolute; width: 100px; height:80px; top:0px; left:50px;" src="https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon/blob/main/public/images/Move%20Background/DV_CUT_OUT.jpg?raw=true">
+  <img id="myImg02" style="position:absolute; width: 100px; height:80px; top:0px; left:250px;" src="https://github.com/Machinelearning3Dprinting/GAME_DEV_22_Brandon/blob/main/public/images/luke-skywalker00.jpg?raw=true">
+
+  <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
   let myTemp = '100px 0px'
   myClock = setInterval(function(){
@@ -63,9 +77,12 @@ function myCheckHit(){
 }">
 
 
-<input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  <input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }"><br><br>
 
 
+</body>
+
+</html>
