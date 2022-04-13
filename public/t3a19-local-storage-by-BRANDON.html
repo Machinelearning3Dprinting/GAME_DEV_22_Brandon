@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="color: white; background-color: black;">
 <head>
     <title>Local Storage</title>
 </head>
@@ -15,16 +15,16 @@ function myStorageFN() {
    myStorage2 = localStorage.getItem('myStoredText2')
    myStorage3 = localStorage.getItem('myStoredText3')
    if(myStorage  != null){
-      document.getElementById('myDiv01').innerHTML = 'Age ' + myStorage 
+      document.getElementById('myDiv01').innerHTML = 'Age: ' + myStorage 
     }
     if(myStorage1  != null){
-      document.getElementById('myDiv02').innerHTML = 'Name ' + myStorage1 
+      document.getElementById('myDiv02').innerHTML = 'Name: ' + myStorage1 
     }
     if(myStorage2  != null){
-      document.getElementById('myDiv03').innerHTML = 'Eye color ' + myStorage2
+      document.getElementById('myDiv03').innerHTML = 'Eye color: ' + myStorage2
     }
     if(myStorage3  != null){
-      document.getElementById('myDiv04').innerHTML = 'Birthday ' + myStorage3
+      document.getElementById('myDiv04').innerHTML = 'Birthday: ' + myStorage3
     }
 }
 
@@ -55,10 +55,10 @@ Birthday: <input id="myText4" type=text size=70 value="" placeholder="Birthday">
 
 <input type="button" value="Retrieve Text" onClick="{
    //document.getElementById('myText1').value = localStorage.getItem('myStoredText')
-   document.getElementById('myDiv01').innerHTML = 'Age ' + localStorage.getItem('myStoredText') // myStorage 
-   document.getElementById('myDiv02').innerHTML = 'Name ' + localStorage.getItem('myStoredText1')
-   document.getElementById('myDiv03').innerHTML = 'Eye color ' + localStorage.getItem('myStoredText2')
-   document.getElementById('myDiv04').innerHTML = 'Birthday ' + localStorage.getItem('myStoredText3')
+   document.getElementById('myDiv01').innerHTML = 'Age: ' + localStorage.getItem('myStoredText') // myStorage 
+   document.getElementById('myDiv02').innerHTML = 'Name: ' + localStorage.getItem('myStoredText1')
+   document.getElementById('myDiv03').innerHTML = 'Eye color: ' + localStorage.getItem('myStoredText2')
+   document.getElementById('myDiv04').innerHTML = 'Birthday: ' + localStorage.getItem('myStoredText3')
    console.log('w')
 }"> 
 
