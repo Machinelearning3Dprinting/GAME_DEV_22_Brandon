@@ -3,7 +3,44 @@
 <head>
     <title>Sort</title>
 </head>
+
+<script>
+    let myMax = 10      // 52 when working
+    let myCards = new Array(myMax)  
+ </script>
+
+
 <body>
-    hello BOB
+
+    <input id="myNum01" type="number" value="10" onchange="{
+        
+        myMax = document.getElementById('myNum01').value;
+
+        
+        
+        
+        }">
+
+
+    <input type=button value="Set Random" onClick="{
+        myCards = new Array(myMax)
+        for (let myLoop = 0;myLoop < myMax;  myLoop++){
+           myCards[myLoop] = Math.floor(Math.random()*1000)
+           //document.getElementById('myDiv01').innerHTML = myCards
+           console.log('w')
+           document.getElementById('myDiv01').innerHTML = ' '
+        }
+        document.getElementById('myDiv01').innerHTML = myCards
+      }">
+
+      <div id="myDiv01" style="word-wrap: break-word;">...</div>
+
+
+      <input type="button" value="sort" onclick="{
+          myCards.sort();
+
+          document.getElementById('myDiv01').innerHTML = myCards
+          
+          }">
 </body>
 </html>
