@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MAZE</title>
+    <link rel="icon" href="../Maze.png" type="Image/png">
+</head>
+
+<link rel="stylesheet" type="text/css" href="./Maze.css" media="screen" />
+
+<script src="./Maze.js"></script>
+<script src="../YAHCAL.js"></script>
+
+<body>
+
+    <script>
+        RandArrayMake('Div01')
+    </script>
+
+    <input type="button" value="refresh array" onclick="{RandArrayMake('Div01')}">
+
+    <div id="Div01">...</div>
+
+    <script>
+        newCanvas(100,100);
+        background("grey");
+        MakeMazeLine();
+    </script>
+
+
+
+</body>
+
+</html>
