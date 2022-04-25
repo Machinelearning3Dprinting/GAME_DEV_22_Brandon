@@ -23,7 +23,7 @@ function initStartUp() {
 
     var myTime = 4000 * 2
 
-    var myStorage = localStorage.getItem('myStoredText')
+    var myStorage = sessionStorage.getItem('myStartUpControl')
 
     if (myStorage == null) {
 
@@ -44,7 +44,7 @@ function initStartUp() {
 }
 
 function StartUp() {
-    localStorage.setItem('myStoredText', null)
+    sessionStorage.setItem('myStartUpControl', 'n')
     // myStorage = localStorage.getItem('myStoredText')
 
 
