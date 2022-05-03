@@ -1,35 +1,55 @@
 // creates a new canvas element with the given width and height
 function newCanvas(width, height) {
     this.canvas = document.createElement("canvas");
-    this.canvas.width = width
-    this.canvas.height = height
+    this.canvas.setAttribute('id', 'myCanvas')
+    this.canvas.width = width || 90 * window.innerHeight / 100
+    this.canvas.height = height || 90 * window.innerHeight / 100
     this.canvas.ctx = this.canvas.getContext('2d')
     document.body.appendChild(this.canvas)
+
+   // border()
 }
 // incorperates an existing canvas
 function existingCanvas(id) {
     this.canvas = document.getElementById(id)
     this.canvas.ctx = this.canvas.getContext('2d')
 }
+function updateCanvas(width, height) {
+    this.canvas = document.getElementById("myCanvas");
+    this.canvas.width = width * window.innerHeight / 100 || 90 * window.innerHeight / 100
+    this.canvas.height = height * window.innerHeight / 100 || 90 * window.innerHeight / 100
+    document.body.appendChild(this.canvas)
+}
+function myGetCanvasSize(output) {
+
+    if (output != null) {
+        console.log(canvas.width)
+        console.log(canvas.height)
+    }
+
+    myWidth_Height = canvas.width
+
+    return myWidth_Height
+}
 // changes the background colour of the canvas
 function background(colour) {
     canvas.style.backgroundColor = colour
-} 
+}
 // changes the canvas border colour, thickness and style
 function border(colour, style, widthpx) {
-    canvas.style.borderStyle = style
-    canvas.style.borderColor = colour
-    canvas.style.borderWidth = widthpx+"px"
+    canvas.style.borderStyle = style || "solid"
+    canvas.style.borderColor = colour || "white"
+    canvas.style.borderWidth = widthpx + "px" || ''
 }
 // draws an ellipse with a center point and a width and height
 function ellipse(x, y, width, height) {
     canvas.ctx.beginPath()
-    canvas.ctx.ellipse(x, y, width, height, 0, 0, 2*Math.PI, false)
+    canvas.ctx.ellipse(x, y, width, height, 0, 0, 2 * Math.PI, false)
 }
 // draws a circle with a center point and a radius
 function circle(x, y, radius) {
     canvas.ctx.beginPath()
-    canvas.ctx.arc(x, y, radius, 0, 2*Math.PI)
+    canvas.ctx.arc(x, y, radius, 0, 2 * Math.PI)
 }
 // fills whatever is in the buffer with the given colour
 function fill(colour) {
@@ -71,15 +91,18 @@ function line(x1, y1, x2, y2) {
     canvas.ctx.lineTo(x2, y2)
 }
 // clears the canvas
-function clear() {
+function canvasClear() {
     canvas.ctx.clearRect(0, 0, canvas.width, canvas.height)
+}
+function objectClear(x, y, width, height) {
+    canvas.ctx.clearRect(x, y, width, height)
 }
 // creates a path of points from a array of points
 function pointPath(points) {
     canvas.ctx.beginPath()
     canvas.ctx.moveTo(points[0][0], points[0][1])
     for (var i = 1; i < points.length; i++) {
-            canvas.ctx.lineTo(points[i][0], points[i][1])
+        canvas.ctx.lineTo(points[i][0], points[i][1])
     }
     canvas.ctx.lineTo(points[0][0], points[0][1])
 }
@@ -97,7 +120,7 @@ function write(text, size, x, y, font) {
     this.x = x || 5
     this.y = y || 30
     this.size = size || 30
-    canvas.ctx.font = font || this.size+"px Arial"
+    canvas.ctx.font = font || this.size + "px Arial"
     console.log(canvas.ctx.font)
     canvas.ctx.fillText(text, this.x, this.y)
 }

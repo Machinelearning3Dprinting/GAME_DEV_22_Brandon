@@ -11,20 +11,25 @@
 <script src="./Maze.js"></script>
 <script src="../YAHCAL.js"></script>
 
-<body>
+<body onload="//getCanvasSize();//newCanvas();" onresize="updateCanvas();">
+
+    <!--<div id="Div01">...</div>-->
 
     <script>
-        RandArrayMake('Div01')
+        newCanvas();
+        RandArrayMake();
     </script>
 
-    <input type="button" value="refresh array" onclick="{RandArrayMake('Div01')}">
+    <!--<input type="button" value="refresh array" onclick="{RandArrayMake('Div01');MakeMazeLine()}">
 
-    <div id="Div01">...</div>
+    <br><br>-->
+
+    <br>
 
     <script>
-        newCanvas(100,100);
-        background("grey");
         MakeMazeLine();
+        //rect(myXCord, myYCord, myLineLengthW, myLineLengthH);
+        //fill("White");
     </script>
 
 
