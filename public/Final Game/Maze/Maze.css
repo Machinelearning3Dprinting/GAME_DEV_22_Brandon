@@ -6,6 +6,8 @@ body {
 }
 
 canvas {
+    display: inline;
+
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
@@ -14,4 +16,85 @@ canvas {
     margin-right: auto;
     display: block;
     overflow: hidden;
+
+}
+
+table.a {
+
+    border-width: 3.5px 0px 3.5px 0px;
+    border-color: grey;
+    border-style: double;
+
+    margin-bottom: 3px;
+
+    /*border: 2.5px solid red;*/
+
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+
+}
+
+table.b {
+
+    display: inline;
+
+
+
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    /*left: 0;*/
+    right: 8px;
+    height: auto;
+
+}
+
+table.c {
+
+    display: inline;
+
+
+
+    position: absolute;
+    top: 125px;
+    bottom: auto;
+    /*left: 0;*/
+    right: 8px;
+    height: auto;
+
+}
+
+td {
+
+    border-width: 0px 3.5px 0px 3.5px;
+    border-color: white;
+    border-style: double;
+
+    width: 33.33vw;
+
+}
+
+td.a1 {
+
+    text-align-last: right;
+    width: 16.05vw;
+
+}
+
+td.a {
+
+    text-align-last: center;
+    width: 16.05vw;
+
+}
+
+th.a {
+
+    width: 32.5vw;
+
 }

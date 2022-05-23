@@ -4,7 +4,7 @@ function sleep(ms) {
 
 function Maze() {
 
-    location = './Maze/Maze.html'
+    location = './New_Maze/new_maze.html'
 }
 
 function Pong() {

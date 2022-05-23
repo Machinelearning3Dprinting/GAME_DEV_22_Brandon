@@ -2,8 +2,8 @@
 function newCanvas(width, height) {
     this.canvas = document.createElement("canvas");
     this.canvas.setAttribute('id', 'myCanvas')
-    this.canvas.width = width || 90 * window.innerHeight / 100
-    this.canvas.height = height || 90 * window.innerHeight / 100
+    this.canvas.width = width || 600
+    this.canvas.height = height || 600
     this.canvas.ctx = this.canvas.getContext('2d')
     document.body.appendChild(this.canvas)
 
@@ -33,7 +33,8 @@ function myGetCanvasSize(output) {
 }
 // changes the background colour of the canvas
 function background(colour) {
-    canvas.style.backgroundColor = colour
+    rect(0, 0, canvas.width, canvas.height) 
+    fill(colour)
 }
 // changes the canvas border colour, thickness and style
 function border(colour, style, widthpx) {
@@ -52,8 +53,9 @@ function circle(x, y, radius) {
     canvas.ctx.arc(x, y, radius, 0, 2 * Math.PI)
 }
 // fills whatever is in the buffer with the given colour
-function fill(colour) {
-    canvas.ctx.fillStyle = colour
+function fill(colour/*, r, g, b*/) {
+    //canvas.ctx.fillStyle = 'rgb('+ r +','+ g +','+ b +')' || "white"
+    canvas.ctx.fillStyle = colour || "white"
     canvas.ctx.fill()
 }
 // does stroke 

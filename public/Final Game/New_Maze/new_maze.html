@@ -2,17 +2,89 @@
 <html>
 
 <head></head>
-<title>jack Maze</title>
+<title>Maze</title>
 <link rel="icon" href="../Maze.png" type="Image/png">
 </head>
 
 <link rel="stylesheet" type="text/css" href="../Maze/Maze.css" media="screen" />
 
-<body onload="BuildMaze();makeMyCharater();autoMove()">
+<body onload="loop();BuildMaze();initTimer();">
+
+    <table class="a" align="center">
+
+        <tr align="center">
+
+            <td>
+                <h1 align="center" id="myh102">...</h1>
+            </td>
+
+            <td>
+                <h1 align="center" id="myh101">...</h1>
+            </td>
+
+            <td>
+                <h2 align="center" id="mydiv01">...</h2>
+            </td>
+
+        </tr>
+
+    </table>
+
+    <!--<table class="b" align="right" border="">
+
+        <th class="a">Best Times</th>
+
+    </table>
+
+    <table class="c" align="right" border="">
+
+        <tr>
+            <td class="a1">Difficulty</td>
+            <td class="a"> Times</td>
+        </tr>
+
+        <tr>
+            <td class="a1">1</td>
+            <td class="a" id="myD1">1</td>
+        </tr>
+
+        <tr>
+            <td class="a1">2</td>
+            <td class="a" id="myD2">2</td>
+        </tr>
+
+        <tr>
+            <td class="a1">3</td>
+            <td class="a" id="myD3">3</td>
+        </tr>
+
+        <tr>
+            <td class="a1">4</td>
+            <td class="a" id="myD4">4</td>
+        </tr>
+
+        <tr>
+            <td class="a1">5</td>
+            <td class="a" id="myD5">5</td>
+        </tr>
+
+        <tr>
+            <td class="a1">6</td>
+            <td class="a" id="myD6">6</td>
+        </tr>
+
+        <tr>
+            <td class="a1">7</td>
+            <td class="a" id="myD7">7</td>
+        </tr>
+    </table>-->
 
     <script src="../YAHCAL.js"></script>
     <script src="./new_maze.js"></script>
-    <input type="button" value="Change Maze" onclick="{canvasClear();MakeNewMaze();MakeMazeStorage();//makeMyCharater()}">
+
+    <!--<h2 align="center" id="mydiv01">...</h2>-->
+
+    <!--<input type="button" value="Change Maze" onclick="{canvasClear();MakeNewMaze();MakeMazeStorage();loop();/*makeMyCharater()*/}">-->
 
 </body>
 
