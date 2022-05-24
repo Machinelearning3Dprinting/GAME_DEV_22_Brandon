@@ -31,10 +31,21 @@ let img = new Image;
 
 pointCheck = localStorage.getItem("myPoints")
 
-let mydiff = (parseInt(cellsizesetter) + 1)
+let mydiff = parseInt((parseInt(cellsizesetter) + 1))
 
-if (String(mydiff) == "NaN") {
-    setTimeout(location.reload, 1000)
+console.log(mydiff)
+
+isNaN(mydiff)
+
+if (isNaN(mydiff) == true) {
+
+    //document.location.reload()
+
+    setTimeout((function() {
+        window.location.reload();
+      }), 250);
+
+    //setTimeout(window.location.reload, 250)
 }
 
 //console.log(mydiff)
@@ -279,15 +290,19 @@ for (let x = 0; x < canvas.width; x += cellsize) {
 
 function loop() {
 
+    //try {
+
     canvasClear()
     background("white")
     BuildMaze()
 
     circle(pl.x + (pl.s * CDivisor) / 2, pl.y + (pl.s * CDivisor) / 2, (pl.s) / 2)
-    fill('rgb('+ r +','+ g +','+ b +')')
+    fill('rgb(' + r + ',' + g + ',' + b + ')')
     img.src = (canvas.toDataURL())
     //console.log(canvas.ctx.getImageData(0, 0, canvas.width, canvas.height).data)
     requestAnimationFrame(loop)
+
+   // } catch(err) {throw location.reload()}
 
 }
 
