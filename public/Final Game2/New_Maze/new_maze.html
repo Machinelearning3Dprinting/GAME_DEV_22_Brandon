@@ -21,20 +21,23 @@
             //code for iPad here 
             document.write("ipad")
             console.log('ipad')
-        } else
+        } else if (navigator.userAgent.match(/iPhone/i)) {
 
-        if (navigator.userAgent.match(/iPhone/i)) {
             //code for iPhone here
-            document.write("iphone") 
+            document.write("iphone")
+            document.write("<input type='button' value='↑' onclick='{}'>")
             console.log('iphone')
-        } else
+            
 
+        } else if (navigator.userAgent.match(/Android/i)) {
 
-        if (navigator.userAgent.match(/Android/i)) {
             //code for Android here
-            document.write("android") 
+            document.write("android")
             console.log('android')
-        } else {console.log('computer')}
+        } else {
+            document.write("computer");
+            console.log('computer');
+        }
 
     </script>
 
