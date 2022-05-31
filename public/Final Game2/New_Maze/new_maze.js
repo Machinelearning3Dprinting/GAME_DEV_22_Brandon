@@ -68,6 +68,8 @@ if (levelcheck == null) {
 
 function loop() {
 
+    Charactercheck = localStorage.getItem("mySize")
+
     canvasClear()
     background("white")
     BuildMaze()

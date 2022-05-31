@@ -44,3 +44,38 @@ function levelChange() {
 }
 
 setInterval(levelChange, 500)
+
+
+function levelChange2() {
+
+    if (cellsizesetter != 6) {
+
+        cellsizesetter++
+
+        cellsize = myCellsizeSet[cellsizesetter]
+
+        localStorage.setItem("mySize", cellsizesetter)
+
+        MakeNewMaze();
+        location.reload();
+
+    }
+
+}
+
+function levelChange3() {
+
+    if (cellsizesetter != 0) {
+
+        cellsizesetter--
+
+        cellsize = myCellsizeSet[cellsizesetter]
+
+        localStorage.setItem("mySize", cellsizesetter)
+
+        MakeNewMaze();
+        location.reload();
+
+    }
+
+}

@@ -50,6 +50,10 @@ window.addEventListener("keydown", e => {
         case 'ArrowRight': if (rows[pl.s * CDivisor / 2][pl.s * CDivisor - 1][0] == 255) { pl.x += pl.s * CDivisor }; break;
 
 
+        case ('Alt' && '='): levelChange2(); break;
+
+        case ('Alt' && '-'): levelChange3(); break;
+
     }
 
 })
